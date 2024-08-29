@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 px-4 pt-4">
+    <div class="flex flex-col lg:flex-row lg:space-x-4">
+        <!-- Sidebar -->
+        <aside class=" hidden md:block bg-white rounded-lg p-4 shadow-md lg:w-1/5">
+            <div class="space-y-6">
+                <!-- <div class="">
+                    <img class="md:hidden w-6 h-6 ml-4" src="/asset/left-arrow.png" alt="back-arrow" onclick="closeSide()">
+                    <div class="w-[95px] h-[95px] border-2  rounded-[300px] bg-white text-2xl text-blue-400 text-center font-[700] pt-[30px] mx-[auto]" style="text-shadow: 2px 2px  rgb(97, 97, 255);">SMART</div>
+                </div> -->
+                <a href="#" class="block text-3xl font-bold pt-6 text-gray-700">SMART SCHOOL</a><br>
+                <nav class="space-y-2">
+                    
+                    <a href="#" class="block text-lg hover:font-[500] hover:w-full py-1 h-[40px] hover:bg-blue-500 hover:text-white pl-2">Materials</a>
+                    <a href="#" class="block text-lg hover:font-[500] hover:w-full py-1 h-[40px] hover:bg-blue-500 hover:text-white pl-2">Classes</a>
+                    <a href="#" class="block text-lg hover:font-[500] hover:w-full py-1 h-[40px] hover:bg-blue-500 hover:text-white pl-2">Exam</a>
+                    <a href="#" class="block text-lg hover:font-[500] hover:w-full py-1 h-[40px] hover:bg-blue-500 hover:text-white pl-2">Academic performance</a>
+                    <a href="#" class="block text-lg hover:font-[500] hover:w-full py-1 h-[40px] hover:bg-blue-500 hover:text-white pl-2">Result</a>
+                    
+                </nav>
+                <button class="text-gray-600">Log out</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="flex-1 bg-white rounded-lg pt-10 px-6 shadow-md space-y-8">
+            <!-- Student Info -->
+             
+            <section class="flex flex-col lg:flex-row lg:space-x-4">
+                <div class="flex-shrink-0">
+                    <img src="../asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png" alt="Student Photo" class="rounded-full w-40 h-40">
+                </div>
+                <div class="space-y-3" >
+                    <h2 class="text-2xl font-bold">Gabriela Richardson</h2>
+                    <div class="md:flex flex-wrap gap-16">
+                        <div class="flex gap-2">
+                            <p class="font-[500]">School:</p>
+                            <p class="text-gray-500">Smart School</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <p class="font-[500]">Age: </p>
+                            <p class="text-gray-500">15</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <p class="font-[500]">Class: </p>
+                            <p class="text-gray-500">S.S 3</p>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <p class="font-[500]">Department: </p>
+                            <p class="text-gray-500">S.S 3</p>
+                        </div>
+                    </div>
+                    <button class="hover:bg-green-600 bg-green-500 text-white border border-green-500 px-4 py-2 rounded-md">View full profile</button>
+                </div>
+            </section>
+
+            <!-- Areas of Interest and Character Traits -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Areas of interest</h3>
+                    <ul class="bg-gray-50 p-4">
+                        <li class="flex justify-between items-center gap-[80px]">
+                            <span class="text-gray-500">Sport</span> 
+                            <div class="w-full h-[5px] border">
+                                <p class="w-[40%] h-[5px] bg-red-400"></p>
+                            </div>
+                        </li>
+
+                        <li class="flex items-center gap-[60px]">
+                            <span class="text-gray-500">Reading</span> 
+                            <div class="w-full h-[5px] border">
+                                <p class="w-[85%] h-[5px] bg-green-400"></p>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center gap-[86px]">
+                            <span class="text-gray-500">Tech</span> 
+                            <div class="w-full h-2[5px]border">
+                                <p class="w-[100%] h-[5px] bg-green-400"></p>
+                            </div>
+                        </li>
+                        
+                        <li class="flex justify-between items-center gap-[48px]">
+                            <span class="text-gray-500">Music/Art</span> 
+                            <div class="w-full h-[5px] border">
+                                <p class="w-[80%] h-[5px] bg-green-400"></p>
+                            </div>
+                        </li>
+
+                        <li class="flex justify-between items-center gap-[58px]">
+                            <span class="text-gray-500">Practical</span> 
+                            <div class="w-full h-[5px] border">
+                                <p class="w-[49%] h-[5px] bg-red-400"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold mb-2">Academic performance</h3>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="md:flex gap-4 items-center">
+                <div class="md:w-[50%] mb-4">
+                    <div class="flex justify-between items-center">
+                        <h1 class="text-lg font-semibold">Social contacts</h1>
+                        <a class="text-blue-500" href="#">See all</a>
+                    </div><br>
+                    <div class="bg-gray-50  p-2 rounded-md">
+                        <div class="grid-flow-col md:flex items-center gap-2">
+                            <img class="w-32 h-32 mx-auto rounded-md" src="../asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png" alt="profile">
+                            <img class="w-32 h-32 mx-auto rounded-md" src="../asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png" alt="profile">
+                            <img class="w-32 h-32 mx-auto rounded-md" src="../asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png" alt="profile">
+                        </div><br>
+                        <p class="text-gray-500">Number of Facebook friends <b class="text-black">78</b></p>
+                    </div>
+                </div>
+
+                <!-- Social Contacts and Academic Performance -->
+
+                <section class="md:w-[50%] bg-gray-50 mb-8 md:mb-0 p-4">
+                    <div>
+                        <div class="flex items-center justify-between 0">
+                            <h3 class="text-lg font-semibold mb-2">Traits of character</h3> 
+                            <a class="text-gray-600 " href="#">See full map</a>
+                        </div><br>
+
+                        <svg class="w-[120px] h-[120px] mx-auto" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M50,10 L50,90" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M10,50 L90,50" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M50,50 L75,25" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M50,50 L25,25" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M50,50 L75,75" stroke="#ddd" stroke-width="2" fill="none" />
+                            <path d="M50,50 L25,75" stroke="#ddd" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                </section>
+            </div>
+
+            
+
+            
+
+
+
+
+
+            <!-- <section class="bg-gray-100 rounded-lg grid grid-cols-1 lg:grid-cols-2 gap-4">
+                
+               
+                <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div class="text-xs font-bold text-gray-600">Conscientiousness</div>
+                    <div class="text-xs font-bold text-gray-600">Neuroticism</div>
+                    <div class="text-xs font-bold text-gray-600">Extraversion</div>
+                    <div class="text-xs font-bold text-gray-600">Openness</div>
+                    <div class="text-xs font-bold text-gray-600">Agreeableness</div>
+                    <div class="text-xs font-bold text-gray-600">Stability</div>
+                </div> -->
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="bg-white rounded-lg p-4 shadow-md lg:w-1/5 mt-8 lg:mt-0">
+            <div class="flex items-center justify-between px-4 w-full h-[40px] border-2 rounded-md">
+                <form >
+                    <input type="search" placeholder="search" name="" id="" class="outline-none">
+                </form>
+
+                <img src="./asset/search.png" alt="serach-icon" class="size-4">
+            </div><br><br>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Personal recommendations</h3>
+                    <ul>
+                        <div class="w-[100%] h-[80px] pt-4 px-2 bg-gray-100 mt-6">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-500">⚡</span>
+                                <span>High stress level: Psychological consultation recommended</span>
+                            </li>
+                        </div>
+
+                        <div class="w-[100%] h-[80px] pt-4 px-2 bg-gray-100 mt-2">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-green-500">✔</span>
+                                <span>Afterschool programs: Drawing classes recommended</span>
+                            </li>
+                        </div>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">Medical history</h3>
+                    <ul>
+                        <div class="w-[100%] h-[90px] pt-4 px-2 bg-gray-100 mt-6">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-500">⚠️</span>
+                                <span>Anxiety disorder: Personal consultation recommended</span>
+                            </li>
+                        </div>
+
+                        <div class="w-[100%] h-[90px] pt-4 px-2 bg-gray-100 mt-2">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-green-500">✔</span>
+                                <span>Mild depressive episode: Cured</span>
+                            </li>
+                        </div>
+                       
+                    </ul>
+                </div>
+                <div class="space-y-2">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md w-full">Contact parents</button>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md w-full">Consultation</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
