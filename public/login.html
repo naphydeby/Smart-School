@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
-    <!-- <div class="w-[100vw] h-[100vh] flex ">
-
-    </div> -->
-    <div class="w-[100vw] h-[100vh] flex">
+   
+    <div class="w-[100%] h-[100vh] md:flex lg:flex">
       <div
-        class="w-[60vw] h-[100%] flex flex-col justify-center"
+        class=" w-[100vw] md:w-[60vw] lg:w-[60vw] h-[100%]  hidden md:block lg:block "
         style="
           background: linear-gradient(
             180deg,
@@ -23,9 +21,9 @@
         "
       >
         <div class="mt-20 text-center">
-          <h1 class="text-6xl font-[600] text-white">Smart School</h1>
+          <h1 class=" text-4xl md:text-6xl lg:text-6xl font-[600] text-white">Smart School </h1>
           <p
-            class="text-white text-2xl font-[400] mt-1"
+            class="text-white md:text-2xl lg:text-2xl font-[400] mt-1"
             style="font-family: Rancho"
           >
             Motto: Building a whole child
@@ -33,58 +31,56 @@
         </div>
 
         <img
-          class="h-[450px] w-[450px] mt-[50px] mx-[auto]"
+          class=" h-[300px] md:h-[450px]  lg:h-[450px] w-[300px] md:w-[450px] lg:w-[450px] mt-[50px] mx-[auto]"
           src="/asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png"
           alt=""
         />
-        <p class="text-center mt-10 text-[20px] text-white">
+        <p class="text-center mt-8 md:text-[20px] lg:text-[20px] text-white">
           &copy; 2024 Smart School. All Rights Reserved.
         </p>
       </div>
 
-      <div class="w-[40vw] h-[100%] bg-white pt-[60px] px-[80px]">
-        <h1 class="text-[32px] font-[800] font-[Avenir]">Smart School</h1>
-        <h2 class="text-[40px] font-[800] mt-20 font-[Avenir]">
-          Welcome Back!
+      <div class="lg:w-[40vw] h-[100%] bg-white pt-[40px] px-[40px] md:px-[80px] lg:px-[80px]">
+        <h1 class=" text-[20px] md:text-[32px] lg:text-[32px] font-[800] font-[Avenir]">Smart School</h1>
+        <h2 class=" text-[30px] md:text-[40px] lg:text-[20px] font-[800] mt-20 font-[Avenir]">
+          Welcome Back Admin!
         </h2>
-        <p class="text-[16px] font-[350] text-gray-400">
-          Dont have an account?<a href="" class="underline font-bold"
-            >Create a new account now.</a
-          >
-        </p>
+        
         <br />
-        <form class="mt-4 text-[17px] font-[600px]">
-          <input
-            type="email"
-            placeholder="Email"
-            id=""
-            class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[100%] h-[60px] rounded-[10px]"
-          />
-          <br />
-
-          <input
-            type="password"
-            placeholder="Password"
-            id=""
-            class="mt-6 border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[100%] h-[60px] rounded-[10px]"
-          />
-          <button
-            type="submit"
-            class="mt-6 bg-black text-white shadow-lg text-center w-[100%] h-[60px] rounded-[10px]"
-          >
-            Login Now
-          </button>
-          <div
-            class="mt-6 border flex pl-[150px] bg-white text-black font-[800] w-[100%] h-[60px] rounded-[10px]"
-          >
-            <img class="w-10 h-10 mt-2" src="/asset/google (1).png" alt="" />
-            <button type="submit" class="ml-4">Login with Google</button>
-          </div>
-          <p class="mt-4 text-center">
-            Forgot password
-            <a href="" class="underline font-bold">Click here</a>
-          </p>
-        </form>
+         <div >
+          <form class="mt-4 text-[17px] font-[600px]">
+           <label for="email" class="ml-2" >Email</label><br>
+            <input
+              type="email"
+              placeholder="name@yahoo.com"
+              id=""
+              class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
+            />
+            <br /><br>
+            <label for="password" class="ml-2 " >Password</label><br>
+            <input
+              type="password"
+              placeholder="........"
+              id=""
+              class=" border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
+            />
+            <button
+              type="submit"
+              class="mt-6 bg-[#318abe] text-white shadow-lg text-center w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
+            >
+              LOGIN
+            </button>
+            <div class="mt-6 text-center flex " >
+              <input type="checkbox" class="mt-1">
+              <p class="ml-2">
+                Save User
+              </p>
+            </div>
+            
+           
+          </form>
+         </div>
+        
       </div>
     </div>
   </body>
