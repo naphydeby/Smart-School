@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white lg:bg-gray-100 md:px-4 md:pt-4">
+    <div class="flex flex-col lg:flex-row lg:space-x-4">
+        <!-- Sidebar -->
+        <aside class="bg-white rounded-lg p-4 md:h-[50vw] lg:shadow-md lg:w-1/5">
+            <div class="lg:sticky top-0 space-y-6">
+                <div class="flex justify-between items-center">
+                    <a href="student-dashboard.html" class="block text-2xl md:text-3xl font-bold lg:pt-6 text-gray-700">SMART SCHOOL</a>
+                    <div class="flex">
+                        <div id="menuImage">
+                            <img class="lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/menu.png" alt="menu" onclick="menuToggle()">
+                        </div>
+
+                        <div class="hidden" id="cancelImage">
+                            <img class=" lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/cancel.png" alt="cancel" onclick="cancelToggle()">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block md:space-y-6" id="navMenu">
+                    <nav>
+                        <a href="student-dashboard.html" class="block py-2 text-xl font-[500] pl-2">Dashboard</a>
+                        <a href="academic-performance.html" class="block py-2 text-lg hover:font-[500] pl-2">Academic performance</a>
+                        <a href="course-material.html" class="block py-2 text-lg hover:font-[500] pl-2">Course Materials</a>
+                        <a href="exam.html" class="block py-2 text-lg hover:font-[500] pl-2">Exam</a>
+                        <a href="payment.html" class="block py-2 text-lg hover:font-[500] pl-2">Payment</a>
+                        <a href="result.html" class="block py-2 text-lg hover:font-[500] pl-2">Result</a>
+                    </nav>
+                    <button class="text-gray-600 mt-4">Log out</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 bg-white rounded-lg pt-10 px-4 md:px-6 lg:shadow-md space-y-8 pb-8 md:pb-16" id="mainContent">
+            <!-- Payment Information -->
+            <section class="mt-6">
+                <div class="">
+                    <h1 class="font-bold text-2xl md:text-3xl lg:pt-4">Profile</h1><br>
+                
+                    <div class="ml-0 md:ml-[50px] lg:ml-[250px]">
+                        <div class="flex flex-col md:flex-row gap-2 md:gap-8 mb-6">
+                            <h2 class="font-[500] text-lg">Surname Name:</h2>
+                            <p class="bg-gray-100 w-full md:w-[340px] h-[45px] text-center py-2 rounded-md">Gabriela</p>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-2 md:gap-[71px] mb-6">
+                            <h2 class="font-[500] text-lg">Last Name:</h2>
+                            <p class="bg-gray-100 w-full md:w-[340px] h-[45px] text-center py-2 rounded-md">Richardson</p>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-2 md:gap-[36px] mb-6">
+                            <h2 class="font-[500] text-lg">Home Address:</h2>
+                            <p class="bg-gray-100 w-full md:w-[340px] h-[45px] text-center py-2 rounded-md">3 Alfred Olaiya road idimu Lagos State</p>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-2 md:gap-[115px] mb-6">
+                            <h2 class="font-[500] text-lg">Email:</h2>
+                            <p class="bg-gray-100 w-full md:w-[340px] h-[45px] text-center py-2 rounded-md">samathan@gmail.com</p>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row gap-2 md:gap-[34px] mb-6">
+                            <h2 class="font-[500] text-lg">Phone Number:</h2>
+                            <p class="bg-gray-100 w-full md:w-[340px] h-[45px] text-center py-2 rounded-md">07088035678</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function menuToggle(){
+            document.getElementById("navMenu").classList.remove("hidden");
+            document.getElementById("mainContent").classList.add("hidden");
+            document.getElementById("cancelImage").classList.remove("hidden");
+            document.getElementById("menuImage").classList.add("hidden");
+        }
+
+        function cancelToggle(){
+            document.getElementById("navMenu").classList.add("hidden");
+            document.getElementById("mainContent").classList.remove("hidden");
+            document.getElementById("cancelImage").classList.add("hidden");
+            document.getElementById("menuImage").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>

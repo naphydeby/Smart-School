@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white lg:bg-gray-100 md:px-4 md:pt-4">
+    <div class="flex flex-col lg:flex-row lg:space-x-4">
+        <!-- Sidebar -->
+        <aside class="bg-white rounded-lg p-4 lg:shadow-md md:h-[47.8vw] lg:w-1/5">
+            <div class="lg:sticky top-0 space-y-6">
+                <div class="flex justify-between items-center">
+                    <a href="student-dashboard.html" class="block text-2xl md:text-3xl font-bold md:pt-6 text-gray-700">SMART SCHOOL</a>
+                    <div class="flex">
+                       <div id="menuImage">
+                            <img class="lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/menu.png" alt="menu" onclick="menuToggle()">
+                       </div>
+
+                        <div class="hidden" id="cancelImage">
+                            <img class=" lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/cancel.png" alt="cancle" onclick="cancelToggle()">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block md:space-y-6" id="navMenu">
+                    <nav>
+                        <a href="student-dashboard.html" class="block py-2 text-xl font-[500] pl-2">Dashboard</a>
+                        <a href="academic-performance.html" class="block py-2 text-lg hover:font-[500] pl-2">Academic performance</a>
+                        <a href="course-material.html" class="block py-2 text-lg hover:font-[500] pl-2">Course Materials</a>
+                        <a href="exam.html" class="block py-2 text-lg bg-blue-500 text-white font-[500] h-[40px] pl-2 rounded-md">Exam</a>
+                        <a href="payment.html" class="block py-2 text-lg hover:font-[500] pl-2">Payment</a>
+                        <a href="result.html" class="block py-2 text-lg hover:font-[500] pl-2">Result</a>
+                    </nav>
+                    <button class="text-gray-600 mt-4">Log out</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="flex-1 bg-white rounded-lg pt-10 px-6 ;lg:shadow-md space-y-8 md:pb-10 " id="mainContent">
+            <!-- Course Material Header -->
+            <section>
+                <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold text-gray-700">Exam</h2>
+                    <div class="hidden md:flex items-center gap-2 md:gap-4">
+                        <img class="w-6 h-6 md:w-8 md:h-8 rounded-[360px] cursor-pointer" src="../asset/profile.jpg" alt="profile">
+                        <img class="w-4 h-4 md:w-6 md:h-6 cursor-pointer" src="../asset/settings.png" alt="settings">
+                    </div>
+                </div>
+                <!-- <p class="text-gray-600 mt-2">Access your course materials here. Click on the links to download or view the materials.</p> -->
+            </section>
+        
+            <!-- Course Materials List -->
+            <section class="flex flex-wrap gap-6 mt-6 md:max-h-[550px] md:overflow-auto">
+                <div class="flex gap-8 flex-wrap md:max-h-[550px] md:overflow-auto ">
+                    <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                        <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                            <p class="font-[500]">CHEMISTRY</p>
+                            <div class="w-[70px] rounded-md h-[30px] bg-red-500 p-1 text-center font-[500]">
+                                Done
+                            </div>
+                        </div>
+
+                       <div class="px-4 mt-2">
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Subject:<p>Chemistry</p> </p>
+                           </div>
+
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Class:<p>SS1</p> </p>
+                          </div>
+
+                          <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Department:<p>Science</p> </p>
+                           </div><br>
+                       </div><hr>
+                       <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                            <a href="#">Start Exam</a>
+                       </div>
+                    </div>
+
+                    <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                        <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                            <p class="font-[500]">PHYSICS</p>
+                            <div class="w-[70px] rounded-md h-[30px] bg-red-500 p-1 text-center font-[500]">
+                                Done
+                            </div>
+                        </div>
+
+                       <div class="px-4 mt-2">
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Subject:<p>Physics</p> </p>
+                           </div>
+
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Class:<p>SS1</p> </p>
+                          </div>
+
+                          <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Department:<p>Science</p> </p>
+                           </div><br>
+                       </div><hr>
+                       <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                            <a href="#">Start Exam</a>
+                       </div>
+                       
+                    </div>
+
+                    <div class="w-[350px] h-[250px] rounded-sm border border-gray-300 bg-blue-500">
+                        <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                            <p class="font-[500]">BIOLOGY</p>
+                            <div class="w-[70px] rounded-md h-[30px] bg-red-500 p-1 text-center font-[500]">
+                                Done
+                            </div>
+                        </div>
+
+                       <div class="px-4 mt-2">
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Subject:<p>Biology</p> </p>
+                           </div>
+
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Class:<p>SS1</p> </p>
+                          </div>
+
+                          <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Department:<p>Science</p> </p>
+                           </div><br>
+                       </div><hr>
+                       <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                            <a href="#">Start Exam</a>
+                       </div>
+                    </div>
+
+                    <div class="flex gap-8 flex-wrap">
+                    <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                        <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                            <p class="font-[500]">MATHEMATICS</p>
+                            <div class="w-[70px] rounded-md h-[30px] bg-green-500 p-1 text-center font-[500]">
+                                Active
+                            </div>
+                        </div>
+
+                       <div class="px-4 mt-2">
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Subject:<p>Mathematics</p> </p>
+                           </div>
+
+                           <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Class:<p>SS1</p> </p>
+                          </div>
+
+                          <div class="flex gap-2 text-white">
+                              <p class="font-[500]">Department:<p>Science</p> </p>
+                           </div><br>
+                       </div><hr>
+                       <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                            <a href="#">Start Exam</a>
+                       </div>
+                    </div>
+
+                    <div class="flex gap-8 flex-wrap">
+                        <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                            <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                                <p class="font-[500]">ENGLISH_ LANGUAGE</p>
+                                <div class="w-[70px] rounded-md h-[30px] bg-green-500 p-1 text-center font-[500]">
+                                    Active
+                                </div>
+                            </div>
+
+                           <div class="px-4 mt-2">
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Subject:<p>English-Language</p> </p>
+                               </div>
+
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Class:<p>SS1</p> </p>
+                              </div>
+
+                              <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Department:<p>Science</p> </p>
+                               </div><br>
+                           </div><hr>
+                           <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                                <a href="#">Start Exam</a>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-8 flex-wrap">
+                        <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                            <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                                <p class="font-[500]">AGRIC-SCI</p>
+                                <div class="w-[70px] rounded-md h-[30px] bg-green-500 p-1 text-center font-[500]">
+                                    Active
+                                </div>
+                            </div>
+
+                           <div class="px-4 mt-2">
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Subject:<p>Agric-Sci</p> </p>
+                               </div>
+
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Class:<p>SS1</p> </p>
+                              </div>
+
+                              <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Department:<p>Science</p> </p>
+                               </div><br>
+                           </div><hr>
+                           <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                                <a href="#">Start Exam</a>
+                           </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-8 flex-wrap">
+                        <div class="w-[350px] h-[250px] rounded-md border border-gray-300 bg-blue-500">
+                            <div class="flex justify-between items-center w-[100%] h-[70px] bg-white px-4">
+                                <p class="font-[500]">GEOGRAPHY</p>
+                                <div class="w-[70px] rounded-md h-[30px] bg-green-500 p-1 text-center font-[500]">
+                                    Active
+                                </div>
+                            </div>
+
+                           <div class="px-4 mt-2 ">
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Subject:<p>Geography</p> </p>
+                               </div>
+
+                               <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Class:<p>SS1</p> </p>
+                              </div>
+
+                              <div class="flex gap-2 text-white">
+                                  <p class="font-[500]">Department:<p>Science</p> </p>
+                               </div><br>
+                           </div><hr>
+                           <div class="w-[150px] cursor-pointer mx-4 mt-4 pl-4 font-[500] rounded-md h-[30px] bg-white">
+                                <a href="#">Start Exam</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        
+        
+
+        
+    </div>
+
+
+
+
+
+
+    <script>
+        
+        function menuToggle(){
+            let navMenu = document.getElementById("navMenu");
+            let mainContent = document.getElementById("mainContent");
+            let cancelImage = document.getElementById("cancelImage");
+            let menuImage = document.getElementById("menuImage");
+    
+            document.getElementById("navMenu").classList.remove("hidden");
+            document.getElementById("mainContent").classList.add("hidden");
+            document.getElementById("cancelImage").classList.remove("hidden");
+            document.getElementById("menuImage").classList.add("hidden");
+        }
+
+        function cancelToggle(){
+            let navMenu = document.getElementById("navMenu");
+            let mainContent = document.getElementById("mainContent");
+            let cancelImage = document.getElementById("cancelImage");
+            let menuImage = document.getElementById("menuImage");
+    
+            document.getElementById("navMenu").classList.add("hidden");
+            document.getElementById("mainContent").classList.remove("hidden");
+            document.getElementById("cancelImage").classList.add("hidden");
+            document.getElementById("menuImage").classList.remove("hidden");
+        }
+
+    </script>
+
+
+
+</body>
+</html>

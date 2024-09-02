@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Material</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white lg:bg-gray-100 md:px-4 md:pt-4">
+    <div class="flex flex-col lg:flex-row lg:space-x-4">
+        <!-- Sidebar -->
+        <aside class="bg-white rounded-lg p-4 lg:shadow-md lg:w-1/5">
+            <div class="lg:sticky top-0 space-y-6">
+                <div class="flex justify-between items-center">
+                    <a href="student-dashboard.html" class="block text-2xl md:text-3xl font-bold md:pt-6 text-gray-700">SMART SCHOOL</a>
+                    <div class="flex">
+                       <div id="menuImage">
+                            <img class="lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/menu.png" alt="menu" onclick="menuToggle()">
+                       </div>
+
+                        <div class="hidden" id="cancelImage">
+                            <img class=" lg:hidden w-6 h-6 md:w-8 md:h-8 cursor-pointer" src="../asset/cancel.png" alt="cancle" onclick="cancelToggle()">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block md:space-y-6" id="navMenu">
+                    <nav>
+                        <a href="student-dashboard.html" class="block py-2 text-xl font-[500] pl-2">Dashboard</a>
+                        <a href="academic-performance.html" class="block py-2 text-lg hover:font-[500] pl-2">Academic performance</a>
+                        <a href="course-material.html" class="block py-2 text-lg bg-blue-500 text-white font-[500] h-[40px] pl-2 rounded-md">Course Materials</a>
+                        <a href="exam.html" class="block py-2 text-lg hover:font-[500] pl-2">Exam</a>
+                        <a href="payment.html" class="block py-2 text-lg hover:font-[500] pl-2">Payment</a>
+                        <a href="result.html" class="block py-2 text-lg hover:font-[500] pl-2">Result</a>
+                    </nav>
+                    <button class="text-gray-600 mt-4">Log out</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="flex-1 bg-white rounded-lg pt-10 px-6 ;lg:shadow-md space-y-8 md:pb-10 " id="mainContent">
+            <!-- Course Material Header -->
+            <section>
+                <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold text-gray-700">Course Materials</h2>
+                    <div class="hidden md:flex items-center gap-2 md:gap-4">
+                        <img class="w-6 h-6 md:w-8 md:h-8 rounded-[360px] cursor-pointer" src="../asset/profile.jpg" alt="profile">
+                        <img class="w-4 h-4 md:w-6 md:h-6 cursor-pointer" src="../asset/settings.png" alt="settings">
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-2">Access your course materials here. Click on the links to download or view the materials.</p>
+            </section>
+        
+            <!-- Course Materials List -->
+            <section class="flex flex-wrap gap-6 mt-6 md:max-h-[550px] md:overflow-auto ">
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">Mathematics</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/math-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Algebra (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/math-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Quadratic Equations (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/math-practice-exercises.xlsx" download class="text-blue-500 hover:underline">Practice Exercises (XLSX)</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">English</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/english-literature-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Literature (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Essay Writing (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-reading-material.pdf" download class="text-blue-500 hover:underline">Reading Material - Shakespeare (PDF)</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">Science</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/science-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Biology (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/science-lab-report.docx" download class="text-blue-500 hover:underline">Lab Report - Photosynthesis (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/science-experiments-video.mp4" download class="text-blue-500 hover:underline">Experiments Video (MP4)</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">History</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/history-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - World War II (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Historical Figures (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-documentary.mp4" download class="text-blue-500 hover:underline">Documentary - WWII (MP4)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">English</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/english-literature-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Literature (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Essay Writing (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-reading-material.pdf" download class="text-blue-500 hover:underline">Reading Material - Shakespeare (PDF)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">English</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/english-literature-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Literature (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Essay Writing (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-reading-material.pdf" download class="text-blue-500 hover:underline">Reading Material - Shakespeare (PDF)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">English</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/english-literature-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - Literature (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Essay Writing (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/english-reading-material.pdf" download class="text-blue-500 hover:underline">Reading Material - Shakespeare (PDF)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">History</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/history-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - World War II (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Historical Figures (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-documentary.mp4" download class="text-blue-500 hover:underline">Documentary - WWII (MP4)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">History</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/history-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - World War II (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Historical Figures (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-documentary.mp4" download class="text-blue-500 hover:underline">Documentary - WWII (MP4)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg w-full md:w-[48%] lg:w-[30%]">
+                    <h3 class="text-xl font-semibold">History</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <a href="path-to-materials/history-lecture-notes.pdf" download class="text-blue-500 hover:underline">Lecture Notes - World War II (PDF)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-assignment1.docx" download class="text-blue-500 hover:underline">Assignment 1 - Historical Figures (DOCX)</a>
+                        </li>
+                        <li>
+                            <a href="path-to-materials/history-documentary.mp4" download class="text-blue-500 hover:underline">Documentary - WWII (MP4)</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        
+        
+        
+
+        <!-- Right Sidebar -->
+        <!-- <aside class="bg-white rounded-lg p-4 shadow-md lg:w-1/5 mt-8 lg:mt-0">
+            <div class="flex items-center justify-between px-4 w-full h-[40px] border-2 rounded-md">
+                <form >
+                    <input type="search" placeholder="search" name="" id="" class="outline-none">
+                </form>
+
+                <img src="../asset/search.png" alt="serach-icon" class="size-4">
+            </div><br><br>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold">Personal recommendations</h3>
+                    <ul>
+                        <div class="w-[100%] h-[80px] pt-4 px-2 bg-gray-100 mt-6">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-500">⚡</span>
+                                <span>High stress level: Psychological consultation recommended</span>
+                            </li>
+                        </div>
+
+                        <div class="w-[100%] h-[80px] pt-4 px-2 bg-gray-100 mt-2">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-green-500">✔</span>
+                                <span>Afterschool programs: Drawing classes recommended</span>
+                            </li>
+                        </div>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">Medical history</h3>
+                    <ul>
+                        <div class="w-[100%] h-[90px] pt-4 px-2 bg-gray-100 mt-6">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-red-500">⚠️</span>
+                                <span>Anxiety disorder: Personal consultation recommended</span>
+                            </li>
+                        </div>
+
+                        <div class="w-[100%] h-[90px] pt-4 px-2 bg-gray-100 mt-2">
+                            <li class="flex items-center space-x-2">
+                                <span class="text-green-500">✔</span>
+                                <span>Mild depressive episode: Cured</span>
+                            </li>
+                        </div>
+                       
+                    </ul>
+                </div>
+                <div class="space-y-2">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md w-full">Contact parents</button>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md w-full">Consultation</button>
+                </div>
+            </div>
+        </aside> -->
+    </div>
+
+
+
+
+
+
+    <script>
+        
+        function menuToggle(){
+            let navMenu = document.getElementById("navMenu");
+            let mainContent = document.getElementById("mainContent");
+            let cancelImage = document.getElementById("cancelImage");
+            let menuImage = document.getElementById("menuImage");
+    
+            document.getElementById("navMenu").classList.remove("hidden");
+            document.getElementById("mainContent").classList.add("hidden");
+            document.getElementById("cancelImage").classList.remove("hidden");
+            document.getElementById("menuImage").classList.add("hidden");
+        }
+
+        function cancelToggle(){
+            let navMenu = document.getElementById("navMenu");
+            let mainContent = document.getElementById("mainContent");
+            let cancelImage = document.getElementById("cancelImage");
+            let menuImage = document.getElementById("menuImage");
+    
+            document.getElementById("navMenu").classList.add("hidden");
+            document.getElementById("mainContent").classList.remove("hidden");
+            document.getElementById("cancelImage").classList.add("hidden");
+            document.getElementById("menuImage").classList.remove("hidden");
+        }
+
+    </script>
+
+
+
+</body>
+</html>
