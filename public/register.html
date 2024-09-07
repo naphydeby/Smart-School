@@ -6,7 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body  >
+  <body class="overflow-x-hidden"  >
 
     <div class="  w-[100vw] h-[100vh] md:flex lg:flex " >
         <div  class=" w-[100vw] md:w-[45vw] lg:w-[45vw] h-[100vh] hidden md:block lg:block "
@@ -47,14 +47,14 @@
             </h2>
             
             <br />
-           <form class="mt-4 text-[17px] font-[600px]  ">
+           <form class="mt-4 text-[17px] font-[600px]   " id="registrationForm">
             <div class=" md:flex lg:flex">
               <div>
                   <label for="Firstname" class="ml-2" >Firstname</label><br>
                   <input
                     type="text"
                     placeholder="Ben"
-                    id=""
+                    id="firstName"
                     class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[23vw] lg:w-[22vw] h-[60px] rounded-[10px]"
                   />
       
@@ -66,7 +66,7 @@
                   <input
                     type="text"
                     placeholder="stoke"
-                    id=""
+                    id="lastName"
                     class="  border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
                   />
               </div>
@@ -75,7 +75,7 @@
           <input
             type="email"
             placeholder="name@yahoo.com"
-            id=""
+            id="email"
             class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[45] lg:w-[45vw] h-[60px] rounded-[10px]"
           />
           <br /><br>
@@ -83,7 +83,7 @@
             <input
               type="Number"
               placeholder="08034678901"
-              id=""
+              id="phoneNumber"
               class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[45vw] lg:w-[45vw] h-[60px] rounded-[10px]"
             />
             <br /><br>
@@ -93,7 +93,7 @@
                   <input
                     type="password"
                     placeholder="........."
-                    id=""
+                    id="password"
                     class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
                   />
       
@@ -105,13 +105,14 @@
                   <input
                     type="password"
                     placeholder="....."
-                    id=""
+                    id="confirmPassword"
                     class="  border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
                   />
               </div>
           </div><br>
           <button
               type="submit"
+              onclick="signup()"
               class="mt-6 bg-[#318abe] text-white shadow-lg text-center w-[80vw] md:w-[45vw] lg:w-[45vw] h-[60px] rounded-[10px]"
             >
               NEXT
@@ -122,124 +123,61 @@
         </div>
 
     </div>
-   
-    <!-- <div class=" bg-green-300 w-[100vw] h-auto md:flex lg:flex">
-      <div
-        class=" w-[100vw] md:w-[45vw] lg:w-[45vw] "
-        style="
-          background: linear-gradient(
-            180deg,
-            #318abe 100%,
-            #0d4363 84.79%,
-            #06344e 0%
-          );
-        "
-      >
-        <div class="mt-20 text-center bg-green-300">
-          <h1 class=" text-4xl md:text-6xl lg:text-6xl font-[600] text-white">Smart School </h1>
-          <p
-            class="text-white md:text-2xl lg:text-2xl font-[400] mt-1"
-            style="font-family: Rancho"
-          >
-            Motto: Building a whole child
-          </p>
-        </div>
-
-        <img
-          class=" h-[300px] md:h-[300px]  lg:h-[400px] w-[300px] md:w-[300px] lg:w-[400px] mt-[50px] mx-[auto]"
-          src="/asset/c7fd297b-8381-4d3c-a795-f52f7ee2220a(1).png"
-          alt=""
-        />
-        <p class="text-center mt-20 md:text-[20px] lg:text-[20px] text-white">
-          &copy; 2024 Smart School. All Rights Reserved.
-        </p>
-      </div>
-
-      <div class=" w-[100vw] md:w-[60vw] lg:w-[55vw] h-auto md:h-[100%] lg:h-[100%] bg-white pt-[40px] px-[40px] md:px-[80px] lg:px-[80px]">
-        <h1 class=" text-[20px] md:text-[32px] lg:text-[32px] font-[800] font-[Avenir]">Smart School</h1>
-        <h2 class=" text-[30px] md:text-[40px] lg:text-[20px] font-[800] mt-20 font-[Avenir]">
-          Register
-        </h2>
-        
-        <br />
+    <script>
+    function signup(){
+      event.preventDefault();
+      let firstName = document.getElementById("firstName").value;
+      let lastName = document.getElementById("lastName").value;
+      let email = document.getElementById("email").value;
+      let phoneNumber= document.getElementById("phoneNumber").value;
+       let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
       
-          <form class="mt-4 text-[17px] font-[600px]">
-            <div class=" md:flex lg:flex">
-                <div>
-                    <label for="Firstname" class="ml-2" >Firstname</label><br>
-                    <input
-                      type="text"
-                      placeholder="Ben"
-                      id=""
-                      class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[23vw] lg:w-[22vw] h-[60px] rounded-[10px]"
-                    />
-        
-                </div>
-                <br />
-    
-                <div class=" md:ml-4 lg:ml-4">
-                    <label for="Lastname" class="lg:ml-4 " >Lastname</label><br>
-                    <input
-                      type="text"
-                      placeholder="stoke"
-                      id=""
-                      class="  border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
-                    />
-                </div>
-            </div><br>
-            <label for="email" class="ml-2 " >Email</label><br>
-            <input
-              type="email"
-              placeholder="name@yahoo.com"
-              id=""
-              class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[45] lg:w-[45vw] h-[60px] rounded-[10px]"
-            />
-            <br /><br>
-            <label for="number" class="ml-2" >Phone Directory</label><br>
-            <input
-              type="Number"
-              placeholder="08034678901"
-              id=""
-              class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[45vw] lg:w-[45vw] h-[60px] rounded-[10px]"
-            />
-            <br /><br>
-            <div class="w-[60vw]  md:flex lg:flex">
-                <div>
-                    <label for="password" class="ml-2" >Password</label><br>
-                    <input
-                      type="password"
-                      placeholder="........."
-                      id=""
-                      class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
-                    />
-        
-                </div>
-                <br />
-    
-                <div class=" md:ml-4 lg:ml-4">
-                    <label for="confirmpassword" class=" md:ml-4 lg:ml-4 " >Confirm password</label><br>
-                    <input
-                      type="password"
-                      placeholder="....."
-                      id=""
-                      class="  border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[20vw] lg:w-[22vw] h-[60px] rounded-[10px]"
-                    />
-                </div>
-            </div><br>
+      var specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+      var emailRegex = /\S+@\S+\.\S+/;
+      var upperCaseRegex = /[A-Z]/;
+      var lowerCaseRegex = /[a-z]/;
+
+          if(!firstName || !lastName   || !phoneNumber  || !email  || !password || !confirmPassword ){
+              alert("field can not be empty");
+              return;
+          }
+          if(isNaN(phoneNumber) || phoneNumber.length < 11 || phoneNumber.length >14){
+              alert("invalid phone number");
+              return;
+          }
+          if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+          }
+          if (!specialCharRegex.test(password) || password.length <8 || !upperCaseRegex.test(password) || !lowerCaseRegex.test(password)) {
+          alert("Password must be at least 8 character long, contain at least one special character,one uppercase and one lowercase");
+          return false;
+              }
+              if (!specialCharRegex.test(confirmPassword)|| confirmPassword.length <8 || !upperCaseRegex.test(confirmPassword) || !lowerCaseRegex.test(confirmPassword)) {
+          alert("Password must be at least 8 character long, contain at least one special character, one Uppercase and one lowercase");
+          return false;
+              }
+              
+          if(password !== confirmPassword){
+              alert("password does not match");
+
+              return;
+          }
+         
+          else{
+              alert("successful");
+              document.getElementById("registrationForm").submit(signup);
+              return;
+          }
             
-            <button
-              type="submit"
-              class="mt-6 bg-[#318abe] text-white shadow-lg text-center w-[80vw] md:w-[45vw] lg:w-[45vw] h-[60px] rounded-[10px]"
-            >
-              LOGIN
-            </button>
-           
-            
-            
-          </form>
-        
-        
-      </div>
-    </div> -->
+      }
+      
+      
+      
+          
+      
+
+  </script>
   </body>
 </html>

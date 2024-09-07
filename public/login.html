@@ -6,7 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body>
+  <body class="overflow-x-hidden
+  " >
    
     <div class="w-[100%] h-[100vh] md:flex lg:flex">
       <div
@@ -48,12 +49,12 @@
         
         <br />
          <div >
-          <form class="mt-4 text-[17px] font-[600px]">
+          <form class="mt-4 text-[17px] font-[600px]" id="loginForm">
            <label for="email" class="ml-2" >Email</label><br>
             <input
               type="email"
               placeholder="name@yahoo.com"
-              id=""
+              id="email"
               class="border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
             />
             <br /><br>
@@ -61,11 +62,12 @@
             <input
               type="password"
               placeholder="........"
-              id=""
+              id="password"
               class=" border-0 border-b-2 bg-white shadow-lg outline-none focus:border-b-2 focus:border-black pl-[16px] w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
             />
             <button
               type="submit"
+              onclick="login()"
               class="mt-6 bg-[#318abe] text-white shadow-lg text-center w-[80vw] md:w-[80%] lg:w-[80%] h-[60px] rounded-[10px]"
             >
               LOGIN
@@ -83,5 +85,42 @@
         
       </div>
     </div>
+    <script>
+      function login(){
+        event.preventDefault();
+      
+        
+        let email = document.getElementById("email").value;
+        
+         let password = document.getElementById("password").value;
+        
+        
+       
+            if( !email  || !password  ){
+                alert("field can not be empty");
+                return;
+            }
+           
+            if(email !== password){
+                alert("email or password incorrect");
+  
+                return;
+            }
+           
+            else{
+                alert("successful");
+                document.getElementById("registrationForm").submit(login);
+                return;
+            }
+              
+        }
+        
+        
+        
+            
+        
+  
+    </script>
+  
   </body>
 </html>
