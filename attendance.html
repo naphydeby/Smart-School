@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance List</title>
+  <script src="Tailwind/tailwind.js"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-4">Student Attendance List</h1>
+
+    <!-- Attendance Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b text-left">Reg No.</th>
+            <th class="py-2 px-4 border-b text-left">Student Name</th>
+            <th class="py-2 px-4 border-b text-left">Date</th>
+            <th class="py-2 px-4 border-b text-left">Status</th>
+            <th class="py-2 px-4 border-b text-left">Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-100">
+            <td class="py-2 px-4 border-b">001</td>
+            <td class="py-2 px-4 border-b">John Doe</td>
+            <td class="py-2 px-4 border-b">Sep 4, 2023</td>
+            <td class="py-2 px-4 border-b">
+                <form action="">
+                    <label for="female" class="text-green-500">Present</label>
+                    <input id="female" type="radio" name="gender"value="f">
+                    <label for="male" class="text-red-500">Absent</label>
+                    <input id="male" type="radio" name="gender"value="m">
+                </form>
+              <!-- <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Present</span> -->
+            </td>
+            <td class="py-2 px-4 border-b">On time</td>
+          </tr>
+          <tr class="hover:bg-gray-100">
+            <td class="py-2 px-4 border-b">002</td>
+            <td class="py-2 px-4 border-b">Jane Smith</td>
+            <td class="py-2 px-4 border-b">Sep 4, 2023</td>
+            <td class="py-2 px-4 border-b">
+                <form action="">
+                    <label for="female" class="text-green-500">Present</label>
+                    <input id="female" type="radio" name="gender"value="f">
+                    <label for="male" class="text-red-500">Absent</label>
+                    <input id="male" type="radio" name="gender"value="m">
+                </form>
+              <!-- <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Absent</span> -->
+            </td>
+            <td class="py-2 px-4 border-b">No notification</td>
+          </tr>
+          <tr class="hover:bg-gray-100">
+            <td class="py-2 px-4 border-b">003</td>
+            <td class="py-2 px-4 border-b">Michael Johnson</td>
+            <td class="py-2 px-4 border-b">Sep 4, 2023</td>
+            <td class="py-2 px-4 border-b">
+                <form action="">
+                    <label for="female" class="text-green-500">Present</label>
+                    <input id="female" type="radio" name="gender"value="f">
+                    <label for="male" class="text-red-500">Absent</label>
+                    <input id="male" type="radio" name="gender"value="m">
+                </form>
+
+              <!-- <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Late</span> -->
+            </td>
+            <td class="py-2 px-4 border-b">15 minutes late</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
