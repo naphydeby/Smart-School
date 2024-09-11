@@ -1,362 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="output.css">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="output.css">
+        <!-- Custom Fonts CSS -->
+        <link rel="stylesheet" href="../asset/fonts/font.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <style>
+            * {
+                font-family:  "Poppins", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
 
-</head>
-<body class="overflow-x-hidden" >
+        <div
+            class="w-full h-screen  ">
+            <!-- Navbar -->
+            <nav class="w-[100vw] h-auto  lg:flex xl:flex flex-wrap justify-between items-center pt-4">
+                <p class=" animate-pulse lg:ml-8 text-blue-500 font-bold  text-[40px]">Smart School</p>
 
-    <div class="w-full h-screen  ">
-        <!-- Navbar -->
-    <nav class="w-[100vw] h-auto  lg:flex xl:flex flex-wrap justify-between pt-4">
-       <p class="  lg:ml-8 text-[#318abe] font-bold  text-[40px]">Smart School</p> 
-       
-        <ul class="flex flex-wrap justify-evenly  ">
-            <li><a href="">Find Sub</a></li>
-            <li class="lg:ml-6" ><a href="">For School</a></li>
-            <li class="lg:ml-6" ><a href="">Resources</a></li>
-            <li class="lg:ml-6" ><a href="">About Us</a></li>
-        </ul>
-       
-       <button class=" text-center  w-[15vw]  lg:w-[10vw] xl:w-[10vw] h-[40px]  rounded-[10px] font-bold border-2 border-black mr-6 "><a href="login.html">Login</a></button>
-    </nav>
-    <hr class="w-[100vw]">
-       <!-- body -->
-        <div class="w-[100vw] h-[full]  lg:flex xl:flex bg-white  lg:pt-4 xl:pt-4 " >
-        <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pl-6 ">
-            <p class="font-bold text-[40px] md:text-[60px] lg:text-[60px] xl:text-[80px]">Keep Learning  </p>
-            <div class="relative ml-[80px] md:ml-[130px]  lg:ml-[130px] xl:ml-[190px] -mt-3">
-                <div class=" absolute bg-transparent border-4 border-transparent border-t-[#318abe] w-[40vw] md:w-[25vw] lg:w-[20vw] xl:w-[20vw] ml-6 rounded-[50%] h-[40px]"></div>
-                <div class=" absolute mt-3 bg-transparent border-4 border-transparent border-t-[#318abe] w-[50vw] md:w-[35vw] lg:w-[25vw] xl:w-[25vw] rounded-[50%] h-[40px]"></div>
-            </div>
-            
-        
-            
-            
-            <p class="font-bold  text-[40px] md:text-[60px] lg:text-[60px] xl:text-[60px]" >on Track</p>
-           <div class=" w-[100vw] lg:w-[50vw]  xl:w-[50vw] lg:flex xl:flex justify-evenly ">
-            <div class="30vw">
-                <p class="text-center mt-2 " >When schools and districts have reliable access to  substitude teachers and subs have the freedom to  choose what and when they teach </p>
+                <ul class="flex flex-wrap justify-evenly  ">
+                    <li>
+                        <a href="">Find Sub</a>
+                    </li>
+                    <li class="lg:ml-6">
+                        <a href="">For School</a>
+                    </li>
+                    <li class="lg:ml-6">
+                        <a href="">Resources</a>
+                    </li>
+                    <li class="lg:ml-6">
+                        <a href="">About Us</a>
+                    </li>
+                </ul>
 
-            </div>
-                       <img class="w-[10vw]  " src="/asset/loading.png" >
-        </div>
-            
-            <div class="mt-4 w-[200px] h-[50px] bg-[#318abe] rounded-[30px] text-center pt-2 text-white font-bold text-[20px] rounded-l-[10px] rounded-b-[5px] " >Get Started</div>
-            <div class="  lg:flex xl:flex pt-10 ">
+                <button class=" text-center  w-[15vw]  lg:w-[10vw] xl:w-[10vw] h-[40px]  rounded-[10px]  border-2 bg-blue-500 text-white mr-6 ">
+                    <a href="login.html">Login</a>
+                </button>
+            </nav>
+            <hr
+            class="w-[100vw]">
+            <!-- body -->
+            <div class="w-[100vw] h-[full]  lg:flex xl:flex bg-white  lg:pt-4 xl:pt-4 ">
+                <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pl-6 ">
+                    <p class="font-bold text-[40px] md:text-[60px] lg:text-[60px] xl:text-[80px]">Keep Learning
+                    </p>
+                    <div class="relative ml-[80px] md:ml-[130px]  lg:ml-[130px] xl:ml-[190px] -mt-3">
+                        <div class=" absolute bg-transparent border-4 border-transparent border-t-blue-500 w-[40vw] md:w-[25vw] lg:w-[20vw] xl:w-[20vw] ml-6 rounded-[50%] h-[40px]"></div>
+                        <div class=" absolute mt-3 bg-transparent border-4 border-transparent border-t-blue-500 w-[50vw] md:w-[35vw] lg:w-[25vw] xl:w-[25vw] rounded-[50%] h-[40px]"></div>
+                    </div>
 
-                <div class=" lg:flex xl:flex " >
-                <img src="/asset/teacher 4.avif" alt="" class=" w-[90vw] lg:w-[18vw] xl:w-[18vw] lg:h-[200px] xl:h-[200px]  lg:ml-[-80px] xl:ml-[-80px]  ">
-                <p class="bg-gray-200 text-center w-[90vw]  lg:w-[20vw] xl:w-[20vw] h-[200px] rounded-[10px] mt-1 text-[40px] pt-4 lg:-ml-8 xl:-ml-8  lg:text-[20px] xl:text-[20px]   ">
-                    Best <b class="text-[#318abe]">Certified</b> <br>
-                    Teacher <br>
-                    Worldwide
-                </p>
-                </div>
-                
-                    <div class="bg-gray-200 w-[90vw]   lg:w-[30vw]  xl:w-[30vw] h-[210px] mt-4  lg:mt-0 xl:mt-0 lg:ml-4 xl:ml-4  rounded-[10px] lg:text-[20px] xl:text-[20px] pt-4 text-[22px]" >
-                       
-                        <div class="flex justify-center items-center">
-                            <img src="/asset/teacher.jpeg" alt=""class='rounded-[10px] w-[150px] h-[80px]   '> 
+
+                    <p class="font-bold  text-[40px] md:text-[60px] lg:text-[60px] xl:text-[60px]">on Track</p>
+                    <div class=" w-[100vw] lg:w-[50vw]  xl:w-[50vw] lg:flex xl:flex justify-evenly ">
+                        <div class="30vw">
+                            <p class="mt-2 ">When schools and districts have reliable access to  substitude teachers and subs have the freedom to  choose what and when they teach
+                            </p>
+
                         </div>
-                         <p class="mt-4 text-center"> <b> Transforming Schools <br> and substitude <br>Teachers </b> </p>
-            </div>
-                
-            
-            </div>
-            <p class="mt-10 text-[35px]  lg:text-[40px] xl:text-[40px]  lg:ml-[60px] xl:ml-[60px] font-bold pl-2">An Easier Way to be
-                <div class="relative md:ml-4 lg:ml-[100px] xl:ml-[100px] -mt-3">
-                    <div class=" absolute bg-transparent border-4 border-transparent border-t-[#318abe] w-[40vw] md:w-[10vw]  lg:w-[10vw] xl:w-[10vw] ml-6 rounded-[50%] h-[40px]"></div>
-                    <div class=" absolute mt-3 bg-transparent border-4 border-transparent border-t-[#318abe] w-[50vw] md:w-[15vw]  lg:w-[15vw] xl:w-[15vw] rounded-[50%] h-[40px]"></div>
+                        <img class="w-[10vw]  " src="/asset/loading.png">
+                    </div>
+
+                    <div class="mt-4 w-[200px] h-[50px] bg-blue-500 rounded-[30px] text-center pt-2 text-white font-bold text-[20px] rounded-l-[10px] rounded-b-[5px] ">Get Started</div>
+                    <div class="  lg:flex xl:flex pt-10 ">
+
+                        <div class=" lg:flex xl:flex ">
+                            <img src="/asset/teacher 4.avif" alt="" class=" w-[90vw] lg:w-[18vw] xl:w-[18vw] lg:h-[200px] xl:h-[200px]  lg:ml-[-80px] xl:ml-[-80px]  ">
+                            <p class="bg-gray-100 shadow-md text-center w-[90vw]  lg:w-[20vw] xl:w-[20vw] h-[200px] rounded-[10px] mt-1 text-[40px] pt-4 lg:-ml-8 xl:-ml-8  lg:text-[20px] xl:text-[20px]   ">
+                                Best
+                                <b class="text-blue-500">Certified</b>
+                                <br>
+                                Teacher
+                                <br>
+                                Worldwide
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-100 shadow-md w-[90vw]   lg:w-[30vw]  xl:w-[30vw] h-[210px] mt-4  lg:mt-0 xl:mt-0 lg:ml-4 xl:ml-4  rounded-[10px] lg:text-[20px] xl:text-[20px] pt-4 text-[22px]">
+
+                            <div class="flex justify-center items-center">
+                                <img src="/asset/teacher.jpeg" alt="" class='rounded-[10px] w-[150px] h-[80px]   '>
+                            </div>
+                            <p class="mt-4 text-center">
+                                
+                                    Transforming Schools
+                                    <br>
+                                    and substitude
+                                    <br>Teachers
+                                
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <p class="mt-10 text-[35px]  lg:text-[40px] xl:text-[40px]  lg:ml-[60px] xl:ml-[60px] font-bold pl-2">An Easier Way to be
+                        <div class="relative md:ml-4 lg:ml-[100px] xl:ml-[100px] -mt-3">
+                            <div class="  absolute bg-transparent border-4 border-transparent border-t-blue-500 w-[40vw] md:w-[10vw]  lg:w-[10vw] xl:w-[10vw] ml-6 rounded-[50%] h-[40px]"></div>
+                            <div class=" absolute mt-3 bg-transparent border-4 border-transparent border-t-blue-500 w-[50vw] md:w-[15vw]  lg:w-[15vw] xl:w-[15vw] rounded-[50%] h-[40px]"></div>
+                        </div>
+
+                        <b class="text-[35px]  lg:text-[40px] xl:text-[40px]  lg:ml-[60px] xl:ml-[60px]">sub and find sub</b>
+                    </p>
                 </div>
-    
-                 <b class="text-[35px]  lg:text-[40px] xl:text-[40px]  lg:ml-[60px] xl:ml-[60px]">sub and find sub</b> </p> 
-        </div>
-        
-        <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pt-[120px] pl-6 lg:pl-10 xl:pl-10  " >
-            
-             <div class="  absolute" >
+
+                <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pt-[120px] pl-6 lg:pl-10 xl:pl-10  ">
+
+                    <div class="  absolute  ml-10">
+
+                        <div class=" shadow-lg animate-pulse bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[30vw]  lg:w-[20vw] xl:w-[20vw] h-[150px] rounded-[30px] ml-[100px]  lg:ml-[150px] xl:ml-[180px]"></div>
+
+
+                        <div class=" shadow-lg animate-pulse bg-gradient-to-r from-blue-500 via-blur-500 to-blue-500 w-[60vw]  lg:w-[36vw]  h-[150px] rounded-[30px] mt-4"></div>
+                        <div class="shadow-lg animate-pulse bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[80vw]  lg:w-[40vw] xl:w-[40vw] h-[150px] rounded-[30px] mt-4"></div>
+                    </div>
+                    <div class=" relative w-[100vw]  lg:w-[60vw] xl:w-[60vw] h-[600px]  lg:ml-[70px] xl:ml-[70px] -mt-[120px] ">
+                        <img class="bg-cover h-full  " src="/asset/student_10-removebg-preview.png" alt="">
+                    </div>
+
+                   
+                    <div class=" w-[100vw]  lg:w-[42vw] xl:w-[42vw] text-center">
+                        <p class="mt-10  rounded-[360px] ">When schools and districts have reliable access to substitude  teachers  and subs have the freedom to choose what and when they teach, more classes are covered and student learning stay on track.</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <img class="w-[10vw] " src="/asset/arrow-with-scribble.png" alt="">
+            </div>
+            <!-- body2 -->
+            <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly">
+                <div class="w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[340px] lg:h-[250px] xl:h-[320px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 flex flex-col justify-between items-center p-5 py-10">
+
+
+                    <div class="flex flex-col">
+                        <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-semibold">Teachers absences
+                            <br>
+                            <span class="text-blue-500 font-semibold">distrupt</span>
+                            student
+                            <br>
+                            learning</p>
+                        <div class=" w-full flex ">
+                            <p class="  text-[20px] lg:text-[15px] xl:text-[15px] pt-4 text-center">When schools and districts have
+                                <br>
+                                reliable access to teachers
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between w-full">
+                        <img class="w-[10vw] lg:w-[5vw] xl:w-[5vw]  ml-2" src="/asset/story.png" alt="">
+                        <div class="w-[10vw] lg:w-[5vw] xl:w-[5vw] mr-2 bg-gray-100 rounded-[40px] border-[3px] mt-1 border-blue-500">
+                            <img class="p-3 rounded-full" src="/asset/right-up.png" alt="">
+                        </div>
+                     </div>
+                </div>
+                              <!-- b -->
+                <div class="w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[340px] lg:h-[250px] xl:h-[320px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 flex flex-col justify-between items-center p-5 py-10">
+                    <div class="flex justify-between w-full">
+                        <img class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw]  ml-2" src="/asset/web.png" alt="">
+                        <div class="w-[10vw] lg:w-[5vw] xl:w-[5vw] mr-2 bg-gray-100 rounded-[40px] border-[3px] mt-1 border-blue-500">
+                            <img class="p-3 rounded-full" src="/asset/right-up.png" alt="">
+                        </div>
+                    </div>
+                    <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-semibold">A better way to
+                        <br>
+                        <span class="text-blue-500 font-semibold">connect
+                        </span>
+                        subs and
+                        <br>
+                        School</p>
+                    <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw] flex justify-center items-center ">
+
+                        <span class="text-center text-[20px] lg:text-[15px] xl:text-[15px] pt-4">When schools and districts have
+                            <br>
+                            reliable access to teachers
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <!-- c -->
                 
-                    <div class="bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[30vw]  lg:w-[20vw] xl:w-[20vw] h-[150px] rounded-[30px] ml-[100px]  lg:ml-[150px] xl:ml-[180px]" ></div>
-                
-                
-                <div class=" bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[60vw]  lg:w-[36vw]  h-[150px] rounded-[30px] mt-4"  ></div>
-                <div class="bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[80vw]  lg:w-[40vw] xl:w-[40vw] h-[150px] rounded-[30px] mt-4" ></div>
+                <div class="w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[340px] lg:h-[250px] xl:h-[320px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 flex flex-col justify-between items-center p-5 py-10">
+
+
+                    <div class="flex flex-col">
+                        <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-semibold">Teachers absences
+                            <br>
+                            <span class="text-blue-500 font-semibold">distrupt</span>
+                            student
+                            <br>
+                            learning</p>
+                        <div class=" w-full flex ">
+                            <p class="  text-[20px] lg:text-[15px] xl:text-[15px] pt-4 text-center">When schools and districts have
+                                <br>
+                                reliable access to teachers
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between w-full">
+                        <img class="w-[10vw] lg:w-[5vw] xl:w-[5vw]  ml-2" src="/asset/story.png" alt="">
+                        <div class="w-[10vw] lg:w-[5vw] xl:w-[5vw] mr-2 bg-gray-100 rounded-[40px] border-[3px] mt-1 border-blue-500">
+                            <img class="p-3 rounded-full" src="/asset/right-up.png" alt="">
+                        </div>
+                     </div>
+                </div>
              </div>
-            <div class=" relative w-[100vw] lg:w-[40vw] xl:w-[40vw] h-[590px]  lg:ml-[120px] xl:ml-[140px] -mt-[100px] ">
-                <img class=" bg-cover  h-full  " src="/asset/student_10-removebg-preview.png" alt="">
-            </div>
-            <div class=" w-[100vw]  lg:w-[42vw] xl:w-[42vw] text-center">           
-             <p class="mt-10  rounded-[360px] " >When schools and districts have reliable access to substitude  teachers  and subs have the freedom to choose what and when they teach, more classes are covered and student learning stay on track.</p>
-            
-            </div>
-
-            </div>
-        </div>
-        <div class="flex justify-center">
-            <img class="w-[10vw] " src="/asset/arrow-with-scribble.png" alt="">
-        </div>
-        <!-- body2 -->
-        <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly" >
-            <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[350px] lg:h-[250px] xl:h-[320px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 ">
-                <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-bold">Teachers absences <br> <b class="text-[#318abe]">distrupt</b> student <br> learning</p>
-                <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw]" >
-                    <p class="text-center text-[20px] lg:text-[15px] xl:text-[20px] pt-4">When schools and districts have <br> reliable access to teachers </p>
-
-                </div>
-                <div class="flex justify-between pt-2 ">
-                    <img class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw] ml-2" src="/asset/story.png" alt="">
-                    <div class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw] mr-2 bg-gray-300 rounded-[40px] border-8 mt-1 border-[#318abe]">
-                        <img class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw]" src="/asset/right-up.png" alt="">
-                    </div>
-                    
-                </div>
-                 </div>
-            <div class="w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[340px] lg:h-[250px] xl:h-[320px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0 ">
-                <div class="flex justify-between pt-2 ">
-                    <img class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw]  ml-2" src="/asset/web.png" alt="">
-                    <div class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw]  mr-2 bg-gray-300 rounded-[40px] border-8 mt-1 border-[#318abe]">
-                        <img class="w-[10vw] md:w-[10vw] lg:w-[5vw] xl:w-[5vw]" src="/asset/right-up.png" alt="">
-                    </div>
-                   </div>
-                <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-bold">A better way to <br> <b class="text-[#318abe]">connect </b> subs and  <br> School</p>
-                <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw]" >
-                    
-                    <p class="text-center text-[20px] lg:text-[15px] xl:text-[20px] pt-4">When schools and districts have <br> reliable access to teachers </p>
-
-                </div>
-            </div>
-            <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] md:h-[340px] lg:h-[250px] xl:h-[320px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 ">
-                <p class="text-center text-[30px] lg:text-[20px] xl:text-[25px] font-bold">Teachers absences <br> <b class="text-[#318abe]">distrupt</b> student <br> learning</p>
-                <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw]" >
-                    <p class="text-center text-[20px] lg:text-[15px] xl:text-[20px] pt-4">When schools and districts have <br> reliable access to teachers </p>
-
-                </div>
-                <div class="flex justify-between pt-2 ">
-                    <img class="w-[10vw] lg:w-[5vw] xl:w-[5vw]  ml-2" src="/asset/story.png" alt="">
-                    <div class="w-[10vw] lg:w-[5vw] xl:w-[5vw] mr-2 bg-gray-300 rounded-[40px] border-8 mt-1 border-[#318abe]">
-                        <img class="w-[10vw] lg:w-[5vw] xl:w-[5vw]" src="/asset/right-up.png" alt="">
-                    </div>
-                    
-                </div>
-                 </div>        
-                    </div>
             <!-- body3 -->
-             <div class="w-[100vw] h-[full]">
+            <div class="w-[100vw] h-[full]">
                 <div class="pl-12 pt-8 lg:flex xl:flex justify-between ">
-                    <div >
-                        <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">Why Choose Our <br> Service  </p>
+                    <div>
+                        <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">Why Choose Our
+                            <br>
+                            Service
+                        </p>
                     </div>
-                
-                <div>
-                    <p class="pr-14"> Schools and districts save time and money, so they can focus <br> on full-time staff and student outcomes. Sub work on their <br>on their own terms while making a difference in students' lives The <br>swing platform makes it easy for administrators </p>
-                </div>
-           </div>
-            
-        <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pt-[120px]  lg:pl-10 xl:pl-10  " >
-            
-            <div class="  absolute" >
-                <div class="flex">
-                    <div class="bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[58vw]  lg:w-[38vw] xl:w-[38vw] h-[150px] rounded-[30px] " ></div>
-                    <div class="bg-gray-300 w-[32vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[20px] lg:ml-[20px] xl:ml-[40px] pt-4 text-center text-[#318abe] " >
-                        <p class="text-[30px] lg:text-[50px] xl:text-[50px] font-bold"> 3k</p>
-                        <p>Highly Trained <br>Teacher </p>
+
+                    <div>
+                        <p class="pr-14">
+                            Schools and districts save time and money, so they can focus
+                            <br>
+                            on full-time staff and student outcomes. Sub work on their
+                            <br>on their own terms while making a difference in students' lives The
+                            <br>swing platform makes it easy for administrators
+                        </p>
                     </div>
-                    <img class="w-[10vw]   hidden lg:block xl:block ml-4" src="/asset/loading.png" >
                 </div>
-                <div class="flex">
-                    <div class="bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[65vw]  lg:w-[40vw] xl:w-[45vw] h-[150px] rounded-[30px] mt-4" ></div>
-                    <div class="bg-gray-300 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[20px] lg:ml-[20px] xl:ml-[40px] pt-4 mt-4 text-center  text-[#318abe]  " >
-                        <p class=" text-[30px] lg:text-[50px] xl:text-[50px] font-bold"> 300+</p>
-                        <p>Study Center <br>Worldwide </p>
+
+                <div class=" w-[100vw]  lg:w-[50vw] xl:w-[50vw] h-full pt-[120px]  lg:pl-10 xl:pl-10  ">
+
+                    <div class="  absolute">
+                        <div class="flex">
+                            <div class="animate-pulse shadow-lg bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[58vw]  lg:w-[38vw] xl:w-[38vw] h-[150px] rounded-[30px] "></div>
+                            <div class="shadow-lg bg-gray-100 w-[32vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[20px] lg:ml-[20px] xl:ml-[40px] pt-4 text-center text-[#318abe] ">
+                                <p class="text-[30px] lg:text-[50px] xl:text-[50px] font-bold">
+                                    3k</p>
+                                <p>Highly Trained
+                                    <br>Teacher
+                                </p>
+                            </div>
+                            <img class="w-[10vw]   hidden lg:block xl:block ml-4" src="/asset/loading.png">
+                        </div>
+                        <div class="flex">
+                            <div class="shadow-lg animate-pulse bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[65vw]  lg:w-[40vw] xl:w-[45vw] h-[150px] rounded-[30px] mt-4"></div>
+                            <div class="shadow-md bg-gray-100 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[20px] lg:ml-[20px] xl:ml-[40px] pt-4 mt-4 text-center  text-[#318abe]  ">
+                                <p class=" text-[30px] lg:text-[50px] xl:text-[50px] font-bold">
+                                    300+</p>
+                                <p>Study Center
+                                    <br>Worldwide
+                                </p>
+                            </div>
+                            <div class=" shadow-md hidden lg:block xl:block bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[30vw]  lg:w-[20vw] xl:w-[20vw] h-[150px] rounded-[30px] lg:ml-[20px] xl:ml-[40px] mt-4  "></div>
+                        </div>
+
+                        <div class="flex">
+                            <div class=" shadow-lg animate-pulse bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[70vw]  lg:w-[45vw] xl:w-[50vw] h-[150px] rounded-[30px]  mt-4"></div>
+                            <div class="shadow-md bg-gray-100 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[10px] lg:ml-[20px] xl:ml-[40px] pt-4 mt-4 text-center  text-[#318abe] ">
+                                <p class="text-[50px] font-bold">
+                                    48+</p>
+                                <p>State We
+                                    <br>Serve
+                                </p>
+                            </div>
+                            <div class=" shadow-md hidden lg:block xl:block bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] lg:ml-[20px] xl:ml-[40px] mt-4  "></div>
+
+                        </div>
+
+
                     </div>
-                    <div class="hidden lg:block xl:block bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[30vw]  lg:w-[20vw] xl:w-[20vw] h-[150px] rounded-[30px] lg:ml-[20px] xl:ml-[40px] mt-4  " ></div>
-                </div>
-                 
-                <div class="flex">
-                    <div class="bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[70vw]  lg:w-[45vw] xl:w-[50vw] h-[150px] rounded-[30px]  mt-4" ></div>
-                    <div class="bg-gray-300 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] ml-[10px] lg:ml-[20px] xl:ml-[40px] pt-4 mt-4 text-center  text-[#318abe] " >
-                        <p class="text-[50px] font-bold"> 48+</p>
-                        <p>State We  <br>Serve </p>
+                    <div class=" relative w-[100vw]  lg:w-[60vw] xl:w-[60vw] h-[600px]  lg:ml-[70px] xl:ml-[70px] -mt-[120px] ">
+                        <img class="bg-cover h-full  " src="/asset/student_10-removebg-preview.png" alt="">
                     </div>
-                    <div class=" hidden lg:block xl:block bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300 w-[30vw]  lg:w-[15vw] xl:w-[15vw] h-[150px] rounded-[30px] lg:ml-[20px] xl:ml-[40px] mt-4  " ></div>
 
                 </div>
-                
-               
-               
-               
-            </div>
-           <div class=" relative w-[100vw]  lg:w-[60vw] xl:w-[60vw] h-[620px]  lg:ml-[70px] xl:ml-[70px] -mt-[120px] ">
-               <img class="bg-cover h-full  " src="/asset/student_10-removebg-preview.png" alt="">
-           </div>
+                <!-- body4 -->
+                <div class="w-[100vw] h-[full]">
+                    <div class="pl-12 pt-8 lg:flex xl:flex justify-between ">
+                        <div>
+                            <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">What our Lovely
+                                <br>
+                                Client Say
+                            </p>
+                        </div>
 
-        </div>
-           <!-- body4 -->
-           <div class="w-[100vw] h-[full]">
-            <div class="pl-12 pt-8 lg:flex xl:flex justify-between ">
-                <div >
-                    <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">What our Lovely <br> Client Say  </p>
-                </div>
-            
-            <div>
-                <p class="pr-14"> We recently heard from Hain  Wei who started teaching with <br> Swing in the spring of 2022, below she shared her story of <br>how she was able to get into the classroom quickly. </p>
-            </div>
-       </div>
-       <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly" >
-        <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 ">
-            <div class="flex">
-                <div class="w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]" >
-       <img class="w-[20vw] lg:w-[10vw] xl:w-[10vw]  rounded-[60px]" src="/asset/female_teacher_3-removebg-preview.png" alt="">
-                </div>
-             <div class="text-center">
-                <h1 class="font-bold text-[20px]">Jenny Wilson</h1>
-                <p>Sub teacher in Texas</p>
-                <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
-            </div>
-           </div>
-           <div class="text-center w-[15w] " >
-                <p >Manageable learning while working. Time well spend when  moving or waiting. Although, the microlearning method is not for me.The entire program was compiled in an understandable and clear way </p>
-            </div>
-        </div>
-         <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 ">
-            <div class="flex">
-                <div class="w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]" >
-       <img class="w-[23vw] lg:w-[13vw] xl:w-[13vw] rounded-[60px]" src="/asset/male_teacher_12-removebg-preview.png" alt="">
-                </div>
-             <div class="text-center">
-                <h1 class="font-bold text-[20px]">Wade Warren</h1>
-                <p>Sub teacher in NY</p>
-                <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
-            </div>
-           </div>
-           <div class="text-center " >
-                <p > Schools and districts save time and money, so they can focus  on full-time staff and student outcomes. Sub work on their on their own terms while making a difference in students' lives The swing platform makes it easy for administrators </p>
-            </div>
-        </div>   
-          <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] bg-gray-300 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 ">
-            <div class="flex">
-                <div class=" w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]" >
-       <img class="w-[20vw] lg:w-[10vw] xl:w-[10vw] rounded-[60px]" src="/asset/heartfelt-teacher-day-celebrationquot_1198081-16284-removebg-preview.png" alt="">
-                </div>
-             <div class="text-center">
-                <h1 class="font-bold text-[20px]">Hilda Fisher</h1>
-                <p>Sub teacher in Texas</p>
-                <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
-            </div>
-           </div>
-           <div class="text-center " >
-                <p >It was a well taught teachers from other schools as well, a great online teaching for people who work full time. The amount of time to spend is 15mins but you will get an astonishing amount of books to read. </p>
-            </div>
-        </div>    
-            </div>
+                        <div>
+                            <p class="pr-14">
+                                We recently heard from Hain  Wei who started teaching with
+                                <br>
+                                Swing in the spring of 2022, below she shared her story of
+                                <br>how she was able to get into the classroom quickly.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly">
+                        <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 ">
+                            <div class="flex">
+                                <div class="w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]">
+                                    <img class="w-[20vw] lg:w-[10vw] xl:w-[10vw]  rounded-[60px]" src="/asset/female_teacher_3-removebg-preview.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="font-bold text-[20px]">Jenny Wilson</h1>
+                                    <p>Sub teacher in Texas</p>
+                                    <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
+                                </div>
+                            </div>
+                            <div class="text-center w-[15w] ">
+                                <p>Manageable learning while working. Time well spend when  moving or waiting. Although, the microlearning method is not for me.The entire program was compiled in an understandable and clear way
+                                </p>
+                            </div>
+                        </div>
+                        <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 ">
+                            <div class="flex">
+                                <div class="w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]">
+                                    <img class="w-[23vw] lg:w-[13vw] xl:w-[13vw] rounded-[60px]" src="/asset/male_teacher_12-removebg-preview.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="font-bold text-[20px]">Wade Warren</h1>
+                                    <p>Sub teacher in NY</p>
+                                    <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
+                                </div>
+                            </div>
+                            <div class="text-center ">
+                                <p>
+                                    Schools and districts save time and money, so they can focus  on full-time staff and student outcomes. Sub work on their on their own terms while making a difference in students' lives The swing platform makes it easy for administrators
+                                </p>
+                            </div>
+                        </div>
+                        <div class=" w-[90vw] lg:w-[30vw] xl:w-[30vw] h-[300px] lg:h-[300px] xl:h-[350px] shadow-md bg-gray-100 rounded-[30px] ml-6 lg:ml-0 xl:ml-0 pt-4 mt-4 lg:mt-0 xl:mt-0 ">
+                            <div class="flex">
+                                <div class=" w-[30vw] lg:w-[15vw] xl:w-[15vw] rounded-[10px]">
+                                    <img class="w-[20vw] lg:w-[10vw] xl:w-[10vw] rounded-[60px]" src="/asset/heartfelt-teacher-day-celebrationquot_1198081-16284-removebg-preview.png" alt="">
+                                </div>
+                                <div class="text-center">
+                                    <h1 class="font-bold text-[20px]">Hilda Fisher</h1>
+                                    <p>Sub teacher in Texas</p>
+                                    <img class="w-[7vw] -mt-2" src="/asset/rating-removebg-preview.png" alt="">
+                                </div>
+                            </div>
+                            <div class="text-center ">
+                                <p>It was a well taught teachers from other schools as well, a great online teaching for people who work full time. The amount of time to spend is 15mins but you will get an astonishing amount of books to read.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    
-    <!-- body5 -->
-    <div class="w-[100vw] h-[full]">
-        <div class="pl-12 pt-8 lg:flex xl:flex justify-between ">
-            <div >
-                <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">Useful Content For <br> Your Check  </p>
-            </div>
-        
-        <div>
-            <p class="pr-14">Looking forward to become a substitude teacher,Swing Education  <br> is now servicing the greater Chicago real substitude teaching is<br>a rewarding job for aspiring teachers, part-time job seekers  </p>
-        </div>
-   </div>
-   <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly" >
-    <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[330px] lg:h-[300px] xl:h-[350px] bg-gray-300 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0">
-        
-        <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw]" >
-            <div class="flex justify-center ">
-                <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw] rounded-[30px]" src="/asset/classroom 1.jpeg" alt="">
-                 </div>
-            <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
-                <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[10vw]">
-                <p>
-                    How swing help me start teaching in 11days
-                </p>
-             </div>
-             <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-300 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0 border-4 lg:border-8 xl:border-8  border-[#318abe]">
-                <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
-            </div>
-            </div>
- 
-        </div>
-     </div>
-    <div class="w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[330px] lg:h-[300px] xl:h-[350px] bg-gray-300 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0 ">
-        <div class="flex justify-center ">
-            <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw] rounded-[30px]" src="/asset/group 1.jpeg" alt="">
-             </div>
-             <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
-                <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[11vw]">
-                <p>
-             The guide To becoming a Substitude Teacher
-                </p>
-             </div>
-             <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-300 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0 border-4 lg:border-8 xl:border-8  border-[#318abe]">
-                <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
-            </div>
-            </div>
 
-    </div>
-    <div class="w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[340px] lg:h-[300px] xl:h-[360px] bg-gray-300 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0 ">
-        <div class="flex justify-center ">
-            <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw]  rounded-[30px]" src="/asset/group2.jpeg" alt="">
-             </div>
-        <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
-            <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[10vw] ">
-            <p>
-            New Effective Teaching Method For Active Child
-            </p>
-         </div>
-         <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-300 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0  border-4 lg:border-8 xl:border-8  border-[#318abe]">
-            <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
-        </div>
-        </div>
-    </div>
-    </div>
-    <div class=" w-[100vw] flex justify-center mt-8">
-        <div class="w-[80vw] h-[full] text-center pt-4  rounded-[20px]    bg-gradient-to-r from-blue-300 via-orange-200 to-blue-300" >
-        <h1 class="text-[30px] text-[#318abe]">Get in touch</h1>
-        <p class="text-[40px]">Join our community of <br> school partners</p>
-        <p >Looking to become a substitude teacher? our education is now <br>
-        servicing the greater Chicago area!
-        </p>
-     </div>
-     
-    </div>
-        <hr class="w-[100vw] mt-8  ">
-    
-    
-    <nav class="w-[100vw] h-auto  lg:flex xl:flex flex-wrap justify-between pt-6">
-        <p class="  lg:ml-8 text-[#318abe] font-bold  text-[40px]">Smart School</p> 
-        
-         <ul class="flex flex-wrap justify-evenly  ">
-             <li><a href="">Find Sub</a></li>
-             <li class="lg:ml-6" ><a href="">For School</a></li>
-             <li class="lg:ml-6" ><a href="">Resources</a></li>
-             <li class="lg:ml-6" ><a href="">About Us</a></li>
-         </ul>
-        
-        <button class=" text-center  w-[15vw]  lg:w-[10vw] xl:w-[10vw] h-[40px]  rounded-[10px] font-bold mr-6 bg-[#318abe] text-white "><a href="">subscribe</a></button>
-     </nav>
-     <div class="w-[100vw]   lg:flex xl:flex justify-between pl-8 pt-8" >
-        <p class=" w-[40vw]">&copy; 2024 Smart School. All Rights Reserved.
-            <div class="flex lg:pl-[280px] xl:pl-[400px] mt-2 lg:mt-0 xl:mt-0 lg:ml-4 xl:ml-4 w-[40vw]">
-                <ion-icon name="logo-instagram" class="text-[#318abe] w-8 h-8 ml-2 "></ion-icon>
-                <ion-icon name="logo-facebook" class="text-[#318abe] w-8 h-8 ml-2 " ></ion-icon>
-                <ion-icon name="logo-twitter" class="text-[#318abe] w-8 h-8 ml-2" ></ion-icon>
-            </div>
-        </p>
+                    <!-- body5 -->
+                    <div class="w-[100vw] h-[full]">
+                        <div class="pl-12 pt-8 lg:flex xl:flex justify-between ">
+                            <div>
+                                <p class="font-bold text-[40px] md:text-[60px] lg:text-[40px] xl:text-[60px]">Useful Content For
+                                    <br>
+                                    Your Check
+                                </p>
+                            </div>
 
-     </div>
-    </div>
+                            <div>
+                                <p class="pr-14">Looking forward to become a substitude teacher,Swing Education
+                                    <br>
+                                    is now servicing the greater Chicago real substitude teaching is<br>a rewarding job for aspiring teachers, part-time job seekers
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-[100vw] h-[full] pt-10   lg:flex xl:flex justify-evenly">
+                            <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[330px] lg:h-[300px] xl:h-[350px] shadow-md bg-gray-100 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0">
 
-    
-</body>
-</html>
+                                <div class=" w-[90vw] lg:w-[25vw] xl:w-[25vw]">
+                                    <div class="flex justify-center ">
+                                        <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw] rounded-[30px]" src="/asset/classroom 1.jpeg" alt="">
+                                    </div>
+                                    <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
+                                        <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[10vw]">
+                                            <p>
+                                                How swing help me start teaching in 11days
+                                            </p>
+                                        </div>
+                                        <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-100 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0 border-4 lg:border-4 xl:border-4  border-blue-500">
+                                            <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[330px] lg:h-[300px] xl:h-[350px] shadow-md bg-gray-100 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0 ">
+                                <div class="flex justify-center ">
+                                    <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw] rounded-[30px]" src="/asset/group 1.jpeg" alt="">
+                                </div>
+                                <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
+                                    <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[11vw]">
+                                        <p>
+                                            The guide To becoming a Substitude Teacher
+                                        </p>
+                                    </div>
+                                    <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-100 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0 border-4 lg:border-4 xl:border-4  border-blue-500">
+                                        <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="w-[90vw] lg:w-[25vw] xl:w-[25vw] h-[340px] lg:h-[300px] xl:h-[360px] shadow-md bg-gray-100 rounded-[30px] pt-4  ml-6 lg:ml-0 xl:ml-0 mt-4 lg:mt-0 xl:mt-0 ">
+                                <div class="flex justify-center ">
+                                    <img class="w-[50vw] lg:w-[20vw] xl:w-[20vw]  rounded-[30px]" src="/asset/group2.jpeg" alt="">
+                                </div>
+                                <div class="flex justify-between pl-8 lg:pl-4 xl:pl-4 pt-4">
+                                    <div class="flex justify-center w-[30vw] lg:w-[10vw] xl:w-[10vw] ">
+                                        <p>
+                                            New Effective Teaching Method For Active Child
+                                        </p>
+                                    </div>
+                                    <div class=" w-[10vw] lg:w-[5vw] xl:w-[5vw] flex justify-center mr-8  lg:mr-2 xl:mr-2 bg-gray-100 h-[40px] lg:h-[60px] xl:h-[60px] rounded-[5px] lg:rounded-[10px] xl:rounded-[10px] mt-2 lg:mt-10 xl:mt-0  border-2 lg:border-4 xl:border-4  border-blue-500">
+                                        <img class=" w-[7vw] lg:w-[5vw] xl:w-[5vw] " src="/asset/right-up.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" w-[100vw] flex justify-center mt-8">
+                            <div class="w-[80vw] h-[220px] text-center pt-4  rounded-[20px] text-white    bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500">
+                                <h1 class="text-[30px] text-blue-500">Get in touch</h1>
+                                <p class="text-[30px]">Join our community of
+                                </p>
+                                <p class="text-[30px]">school partners</p>
+                                <p>Looking to become a substitude teacher? our education is now
+                                    <br>
+                                    servicing the greater Chicago area!
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr class="w-[100vw] mt-8  ">
+
+
+                        <nav class="w-[100vw] h-auto  lg:flex xl:flex flex-wrap justify-between pt-6">
+                            <p class=" animate-pulse  lg:ml-8 text-blue-500 font-bold  text-[40px]">Smart School</p>
+
+                            <ul class="flex flex-wrap justify-evenly  ">
+                                <li>
+                                    <a href="">Find Sub</a>
+                                </li>
+                                <li class="lg:ml-6">
+                                    <a href="">For School</a>
+                                </li>
+                                <li class="lg:ml-6">
+                                    <a href="">Resources</a>
+                                </li>
+                                <li class="lg:ml-6">
+                                    <a href="">About Us</a>
+                                </li>
+                            </ul>
+
+                            <button class=" text-center  w-[15vw]  lg:w-[10vw] xl:w-[10vw] h-[40px]  rounded-[10px] font-bold mr-6 bg-blue-500 text-white ">
+                                <a href="">subscribe</a>
+                            </button>
+                        </nav>
+                        <div class="w-[100vw]   lg:flex xl:flex justify-between items-center pl-8 pt-8">
+                            <p class=" w-[40vw]">&copy; 2024 Smart School. All Rights Reserved.
+                                <div class="flex lg:pl-[280px] xl:pl-[400px] mt-2 lg:mt-0 xl:mt-0 lg:ml-4 xl:ml-4 w-[40vw]">
+                                    <ion-icon name="logo-instagram" class="text-blue-500 w-8 h-8 ml-2 "></ion-icon>
+                                    <ion-icon name="logo-facebook" class="text-blue-500 w-8 h-8 ml-2 "></ion-icon>
+                                    <ion-icon name="logo-twitter" class="text-blue-500 w-8 h-8 ml-2"></ion-icon>
+                                </div>
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </body>
+            </html>
