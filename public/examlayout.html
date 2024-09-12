@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex flex-col items-center justify-center">
+
+        <section id="quiz-container" class="bg-white p-6 shadow-lg rounded-lg w-full max-w-xl">
+  
+            <h3 class="text-lg font-semibold mb-4">Loading Quiz...</h3>
+        </section>
+
+        <button id="next-btn" class="bg-blue-600 text-white py-2 px-6 rounded-lg mt-4" disabled>Next</button>
+    </div>
+
+    <script>
+            document.getElementById('menuToggle').addEventListener('click', () => {
+            const navMenu = document.getElementById('navMenu');
+            if (navMenu.classList.contains('hidden')) {
+                navMenu.classList.remove('hidden');
+            } else {
+                navMenu.classList.add('hidden');
+            }
+        });
+        $(document).ready(function() {
+            const quizApiUrl = 'https://quizapi.io/api/v1/questions?limit=10'; 
+            const apiKey = 'Kf5IrWW9ERIcCiXhacbLUiAYHuk07K5wB6TFwYqh'; 
+            const quizContainer = $('#quiz-container');
+            let currentQuestionIndex = 0;
+            let totalQuestions = 0;
+            let userResponses = [];
+
+            $.ajax({
+                url: quizApiUrl,
+                method: 'GET',
+                headers: {
+                    'X-Api-Key': apiKey
+                },
+                success: function(data) {
+                    if (data) {
+                        totalQuestions = data.length;
+                        displayQuestion(data[currentQuestionIndex], currentQuestionIndex);
+
+                        $('#next-btn').prop('disabled', false);
+
+    
+                        $('#next-btn').on('click', function() {
+   
+                            const selectedAnswer = $(`input[name="question-${currentQuestionIndex}"]:checked`).val();
+                            
+                            if (selectedAnswer === undefined) {
+                                alert("Please select an answer!");
+                                return;
+                            }
+
+
+                            userResponses.push({
+                                questionId: data[currentQuestionIndex].id,
+                                answer: selectedAnswer
+                            });
+
+   
+                            currentQuestionIndex++;
+                            
+                            if (currentQuestionIndex < totalQuestions) {
+                                displayQuestion(data[currentQuestionIndex], currentQuestionIndex);
+                            } else {
+    
+                                submitQuiz(userResponses);
+                            }
+                        });
+                    } else {
+                        quizContainer.html("<h3>No questions found!</h3>");
+                    }
+                },
+                error: function(err) {
+                    console.error("Error fetching quiz data:", err);
+                    quizContainer.html("<h3>Error loading quiz. Please try again later.</h3>");
+                }
+            });
+            function displayQuestion(question, index) {
+                quizContainer.empty(); 
+                const answers = question.answers; 
+                const filteredAnswers = Object.keys(answers).filter(key => answers[key] !== null); 
+                
+                const questionHtml = `
+                    <div class="question-block">
+                        <h3 class="text-lg font-semibold mb-4">Question ${index + 1}</h3>
+                        <p class="text-gray-700 mb-4">${question.question}</p>
+                        <ul class="space-y-2 mb-6">
+                            ${filteredAnswers.map((key, i) => `
+                                <li class="flex items-center">
+                                    <input type="radio" name="question-${index}" value="${key}" id="answer-${index}-${i}" class="w-4 h-4 mr-2">
+                                    <label for="answer-${index}-${i}">${answers[key]}</label>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+                quizContainer.append(questionHtml);
+            }
+
+            function submitQuiz(responses) {
+                $.ajax({
+                    url: 'https://your-backend-api-url.com/submit-result', 
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        results: responses
+                    }),
+                    success: function(response) {
+                        alert('Quiz submitted successfully!');
+                        console.log(response);
+                    },
+                    error: function(err) {
+                        alert('An error occurred. Please try again.');
+                        console.log(err);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

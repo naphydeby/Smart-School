@@ -24,9 +24,7 @@
                 </button>
             </div><br><br class="hidden md:block">
             
-        
-            <div class="" id="navMenu">
-
+            <div id="navMenu">
                 <div class="text-black space-y-6">
                     <div class="flex items-center gap-2 w-full h-[50px] border cursor-point bg-white p-2 rounded-md">
                         <img src="../asset/dashboard.png" alt="dashboard" class="w-6 h-6">
@@ -58,7 +56,6 @@
 
         <!-- Main Content -->
         <main class="flex-1 p-6 flex flex-col space-y-6">
-
             <!-- Header with User Status -->
             <header class="flex justify-between items-center">
                 <h2 class="text-xl font-bold text-blue-500">Exam / Chemistry</h2>
@@ -68,39 +65,12 @@
             </header>
 
             <!-- Question Section -->
-            <section class="bg-white p-6 shadow-lg rounded-lg flex-1">
-                <h3 class="text-lg font-semibold mb-4">Question 37</h3>
-                <p class="text-gray-700 mb-4">
-                    Lorem Ipsum comes from a latin text written in 45BC by Roman statesman, lawyer, scholar, and philosopher, Marcus Tullius Cicero. The text is titled "de Finibus Bonorum et Malorum" which means "The Extremes of Good and Evil". The most common form of Lorem ipsum is the following:
-                </p>
-                <p class="text-gray-700 mb-4">
-                    Lorem Ipsum comes from a latin text written in 45BC by Roman statesman, lawyer, scholar, and philosopher, Marcus Tullius Cicero. The text is titled "de Finibus Bonorum et Malorum" which means "The Extremes of Good and Evil". The most common form of Lorem ipsum is the following:
-                </p>
-
-                <!-- Answer Section -->
-                <h4 class="text-lg font-semibold mb-4">Answer 37</h4>
-                <ul class="space-y-2 mb-6">
-                    <li class="flex items-center">
-                        <input type="checkbox" id="a" class="w-4 h-4 mr-2">
-                        <label for="a">Choose 3 Questions</label>
-                    </li>
-                    <li class="flex items-center">
-                        <input type="checkbox" id="b" class="w-4 h-4 mr-2">
-                        <label for="b">Share link with candidates</label>
-                    </li>
-                    <li class="flex items-center">
-                        <input type="checkbox" id="c" class="w-4 h-4 mr-2">
-                        <label for="c">Watch the video responses roll in</label>
-                    </li>
-                    <li class="flex items-center">
-                        <input type="checkbox" id="d" class="w-4 h-4 mr-2">
-                        <label for="d">Ramsey did this</label>
-                    </li>
-                </ul>
-
-                <!-- Next Button -->
-                <button class="bg-blue-600 text-white py-2 px-6 rounded-lg">Next</button>
+            <section id="quiz-container" class="bg-white p-6 shadow-lg rounded-lg flex-1">
+                <!-- Questions will be dynamically inserted here -->
             </section>
+
+            <!-- Next Button -->
+            <button id="next-btn" class="bg-blue-600 text-white py-2 px-6 rounded-lg">Next</button>
 
             <!-- Progress Bar -->
             <div>
@@ -108,7 +78,6 @@
                     <div class="bg-blue-600 h-2 rounded-full w-3/4"></div>
                 </div>
             </div>
-
         </main>
 
         <!-- Sidebar (Right) -->
@@ -137,16 +106,112 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        document.getElementById('menuToggle').addEventListener('click', () => {
-            const navMenu = document.getElementById('navMenu');
-            if (navMenu.classList.contains('hidden')) {
-                navMenu.classList.remove('hidden');
-            } else {
-                navMenu.classList.add('hidden');
+        $(document).ready(function() {
+            const quizApiUrl = 'https://quizapi.io/api/v1/questions?limit=10'; 
+            const apiKey = 'Kf5IrWW9ERIcCiXhacbLUiAYHuk07K5wB6TFwYqh'; 
+            const quizContainer = $('#quiz-container');
+            let currentQuestionIndex = 0;
+            let totalQuestions = 0;
+            let userAnswers = [];
+            let correctAnswersCount = 0;
+    
+            $.ajax({
+                url: quizApiUrl,
+                method: 'GET',
+                headers: {
+                    'X-Api-Key': apiKey
+                },
+                success: function(data) {
+                    if (data && data.length > 0) {
+                        totalQuestions = data.length;
+                        displayQuestion(data[currentQuestionIndex], currentQuestionIndex);
+    
+                        $('#next-btn').prop('disabled', false);
+    
+                        $('#next-btn').on('click', function() {
+                            const selectedAnswer = $(`input[name="question-${currentQuestionIndex}"]:checked`).val();
+    
+                            if (selectedAnswer === undefined) {
+                                alert("Please select an answer!");
+                                return;
+                            }
+    
+                            // Save the user's answer
+                            userAnswers.push({
+                                questionId: data[currentQuestionIndex].id,
+                                answer: selectedAnswer
+                            });
+    
+                            // Check if the answer is correct
+                            if (data[currentQuestionIndex].correct_answers[`answer_${selectedAnswer}_correct`] === "true") {
+                                correctAnswersCount++;
+                            }
+    
+                            currentQuestionIndex++;
+    
+                            if (currentQuestionIndex < 5) {
+                                displayQuestion(data[currentQuestionIndex], currentQuestionIndex);
+                            } else {
+                                submitScore(correctAnswersCount, totalQuestions);
+                                console.log(correctAnswersCount)
+                            }
+                        });
+                    } else {
+                        quizContainer.html("<h3>No questions found!</h3>");
+                    }
+                },
+                error: function(err) {
+                    console.error("Error fetching quiz data:", err);
+                    quizContainer.html("<h3>Error loading quiz. Please try again later.</h3>");
+                }
+            });
+    
+            function displayQuestion(question, index) {
+                quizContainer.empty(); 
+                const answers = question.answers; 
+                const filteredAnswers = Object.keys(answers).filter(key => answers[key] !== null); 
+    
+                const questionHtml = `
+                    <div class="question-block">
+                        <h3 class="text-lg font-semibold mb-4">Question ${index + 1}</h3>
+                        <p class="text-gray-700 mb-4">${question.question}</p>
+                        <ul class="space-y-2 mb-6">
+                            ${filteredAnswers.map((key, i) => `
+                                <li class="flex items-center">
+                                    <input type="radio" name="question-${index}" value="${key.split('_')[1]}" id="answer-${index}-${i}" class="w-4 h-4 mr-2">
+                                    <label for="answer-${index}-${i}">${answers[key]}</label>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+                quizContainer.append(questionHtml);
+            }
+    
+            function submitScore(score, total) {
+                $.ajax({
+                    url: 'https://your-backend-api-url.com/submit-result', 
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        score: score,
+                        total: total
+                    }),
+                    success: function(response) {
+                        alert('Quiz submitted successfully!');
+                        console.log(response);
+                    },
+                    error: function(err) {
+                        alert('An error occurred. Please try again.');
+                        console.log(err);
+                    }
+                });
             }
         });
     </script>
+    
 
 </body>
 </html>
