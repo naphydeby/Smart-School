@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="output.css" />
    <style>
     @keyframes welcome {
@@ -52,46 +52,35 @@
 
       <div class="lg:w-[40vw] h-[100%] bg-white flex flex-col justify-center items-center space-y-4">
         <h1 class="  text-[40px] font-[800] font-[Avenir] " style="color:#318abe;
-        animation:welcome 5s infinite"  >Welcome!</h1>
-        <h2 class=" text-[20px] font-[800]  font-[Avenir]">
-          Login As
-        </h2>
+        animation:welcome 5s infinite"  >Welcome Admin!</h1>
+       
         
         
          <div class=" " >
           <form class="text-[17px] font-[600px]" id="loginForm">
-          <div class="text-[12px] w-[80vw] lg:w-[35vw] xl:w-[35vw] flex justify-between items-center mt-8 ">
-              <button
-            
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-             <a href="adminlogin.html"> ADMIN</a>
-            </button>
-            <button
-            
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="teacherlogin.html">
-              TEACHER
-            </button>
-          </a>
-            <button
-             
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="studentlogin.html">
-              STUDENT
-            </button>
-          </a>
-            <button
-              
-              
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="guardianlogin.html">
-              GUARDIAN
-            </button>
-          </a>
+           <label for="email" class="" >Email</label><br>
+            <input
+              type="email"
+              placeholder="Enter your name"
+              id="email"
+              class=" pl-4 border-0 border-b-2 bg-white shadow-md outline-none focus:border-b-2 focus:border-black w-[80vw]  lg:w-[35vw]  h-[60px] rounded-[10px]"
+            />
+            <br /><br>
+            <label for="password" class=" " >Password</label><br>
+            <input
+              type="password"
+              placeholder="........"
+              id="password"
+              class=" pl-4 border-0 border-b-2 bg-white shadow-md outline-none focus:border-b-2 focus:border-black  w-[80vw]  lg:w-[35vw] h-[60px] rounded-[10px]"
+            />
+            <div class="text-[12px] w-[80vw] lg:w-[35vw] xl:w-[35vw] flex justify-between items-center mt-8 ">
+                <button
+                type="submit"
+                onclick="login()"
+                class=" bg-[#318abe] text-white shadow-md text-center w-[80%]  lg:w-[80vw] h-[40px] rounded-[5px]"
+              >
+                Login
+              </button>
             </div>
            
             <div class="mt-6 text-center flex " >
@@ -107,7 +96,42 @@
         
       </div>
     </div>
-    
+    <script>
+      function login(){
+        event.preventDefault();
+      
+        
+        let email = document.getElementById("email").value;
+        
+         let password = document.getElementById("password").value;
+        
+        
+       
+            if( !email  || !password  ){
+                alert("field can not be empty");
+                return;
+            }
+           
+            if(email !== password){
+                alert("email or password incorrect");
+  
+                return;
+            }
+           
+            else{
+                alert("successful");
+                document.getElementById("registrationForm").submit(login);
+                return;
+            }
+              
+        }
+        
+        
+        
+            
+        
+  
+    </script>
    
   </body>
 </html>
