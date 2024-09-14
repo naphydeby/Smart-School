@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School Attendance List with Multiple Options</title>
   <script src="Tailwind/tailwind.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <style>
     .present {
       background-color: #c6f6d5; /* Tailwind green-200 */
@@ -18,94 +19,123 @@
   </style>
 </head>
 <body class="bg-gray-100 p-6">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-8">Student Attendance List</h1>
-
-    <!-- Date Picker -->
-    <div class="mb-6">
-      <label for="attendance-date" class="text-lg font-semibold mr-4">Select Date:</label>
-      <input id="attendance-date" type="date" class="border border-gray-300 rounded-lg px-4 py-2">
-    </div>
-
-    <!-- Attendance Table -->
-    <table class="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
-      <thead>
-        <tr class="bg-gray-200 text-left">
-            <th class="py-3 px-4 font-medium text-gray-700">Reg No.</th>
-          <th class="py-3 px-4 font-medium text-gray-700">Student Name</th>
-          <th class="py-3 px-4 font-medium text-gray-700">Present</th>
-          <th class="py-3 px-4 font-medium text-gray-700">Absent</th>
-          <th class="py-3 px-4 font-medium text-gray-700">Late</th>
-        </tr>
-      </thead>
-      <tbody id="attendance-list">
-        <!-- Student Row Template -->
-        <tr class="border-b border-gray-200">
-            <td class="py-3 px-4">001</td>
-          <td class="py-3 px-4">John Doe</td>
-          <td class="py-3 px-4">
-            <input type="radio" name="John Doe" value="Present" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="John Doe" value="Absent" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="John Doe" value="Late" onchange="markAttendance(this)">
-          </td>
-        </tr>
-        <tr class="border-b border-gray-200">
-            <td class="py-3 px-4">002</td>
-          <td class="py-3 px-4">Jane Smith</td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Jane Smith" value="Present" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Jane Smith" value="Absent" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Jane Smith" value="Late" onchange="markAttendance(this)">
-          </td>
-        </tr>
-        <tr class="border-b border-gray-200">
-            <td class="py-3 px-4">003</td>
-          <td class="py-3 px-4">Chris Brown</td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Present" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Absent" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Late" onchange="markAttendance(this)">
-          </td>
-        </tr>
-        <tr class="border-b border-gray-200">
-            <td class="py-3 px-4">004</td>
-          <td class="py-3 px-4">Aweda Samod</td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Present" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Absent" onchange="markAttendance(this)">
-          </td>
-          <td class="py-3 px-4">
-            <input type="radio" name="Chris Brown" value="Late" onchange="markAttendance(this)">
-          </td>
-        </tr>
-        <!-- Add more students here -->
-      </tbody>
-    </table>
-
-    <!-- View Attendance Status -->
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="hidden md:block w-64 bg-white p-4 text-black" id="sidebar">
+      <box-icon name='left-arrow-alt' class="md:hidden w-6 h-6 ml-4" onclick="closeSide()"></box-icon>
+      <!-- <img  src="../../asset/left-arrow.png" alt="back-arrow" onclick="closeSide()"> -->
+    <div class="text-2xl font-semibold mb-4">Smart School</div>
+    <nav class="space-y-2">
+      <a href="Admin_dashboard.html" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Dashboard</a>
+      <a href="Student_Attendance.html" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Attendance</a>
+      <a href="" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Accounts</a>
+      <a href="#" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Course</a>
+    </nav>
     <div class="mt-8">
-      <h2 class="text-2xl font-semibold mb-4">Attendance Summary</h2>
-      <ul id="attendance-summary" class="list-disc list-inside bg-white p-4 rounded-lg shadow-md">
-        <!-- Attendance status will be displayed here -->
-        <li>No attendance marked yet.</li>
-      </ul>
+      <h3 class="text-sm text-gray-500 uppercase mb-2 ">Teams</h3>
+      <nav class="space-y-2">
+        <a href="#" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Marketing</a>
+        <a href="#" class="block py-2 px-3 hover:bg-blue-500 rounded-lg">Development</a>
+      </nav>
     </div>
+    <div class="mt-auto">
+      <a href="#" class="block py-2 px-3 text-gray-500 hover:bg-blue-500 rounded-lg">Settings</a>
+      <a href="#" class="block py-2 px-3 text-gray-500 hover:bg-blue-500 rounded-lg">Log Out</a>
+    </div>
+  </aside>
+    <div class="max-w-4xl mx-auto">
+      <div class="flex gap-3">
+        <img class="md:hidden w-6 h-6" src="asset/menu.png" alt="" onclick="menuImage()">
+        <h1 class="text-3xl font-bold mb-8">Student Attendance List</h1>
+        <!-- <div class="">Back</div> -->
+      </div>
+  
+      <!-- Date Picker -->
+      <div class="mb-6">
+        <label for="attendance-date" class="text-lg font-semibold mr-4">Select Date:</label>
+        <input id="attendance-date" type="date" class="border border-gray-300 rounded-lg px-4 py-2">
+      </div>
+  
+      <!-- Attendance Table -->
+      <table class="min-w-full bg-white rounded-lg shadow-md overflow-hidden">
+        <thead>
+          <tr class="bg-gray-200 text-left">
+              <th class="py-3 px-4 font-medium text-gray-700">Reg No.</th>
+            <th class="py-3 px-4 font-medium text-gray-700">Student Name</th>
+            <th class="py-3 px-4 font-medium text-gray-700">Present</th>
+            <th class="py-3 px-4 font-medium text-gray-700">Absent</th>
+            <th class="py-3 px-4 font-medium text-gray-700">Late</th>
+          </tr>
+        </thead>
+        <tbody id="attendance-list">
+          <!-- Student Row Template -->
+          <tr class="border-b border-gray-200">
+              <td class="py-3 px-4">001</td>
+            <td class="py-3 px-4">John Doe</td>
+            <td class="py-3 px-4">
+              <input type="radio" name="John Doe" value="Present" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="John Doe" value="Absent" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="John Doe" value="Late" onchange="markAttendance(this)">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200">
+              <td class="py-3 px-4">002</td>
+            <td class="py-3 px-4">Jane Smith</td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Jane Smith" value="Present" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Jane Smith" value="Absent" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Jane Smith" value="Late" onchange="markAttendance(this)">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200">
+              <td class="py-3 px-4">003</td>
+            <td class="py-3 px-4">Chris Brown</td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Present" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Absent" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Late" onchange="markAttendance(this)">
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200">
+              <td class="py-3 px-4">004</td>
+            <td class="py-3 px-4">Aweda Samod</td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Present" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Absent" onchange="markAttendance(this)">
+            </td>
+            <td class="py-3 px-4">
+              <input type="radio" name="Chris Brown" value="Late" onchange="markAttendance(this)">
+            </td>
+          </tr>
+          <!-- Add more students here -->
+        </tbody>
+      </table>
+  
+      <!-- View Attendance Status -->
+      <div class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Attendance Summary</h2>
+        <ul id="attendance-summary" class="list-disc list-inside bg-white p-4 rounded-lg shadow-md">
+          <!-- Attendance status will be displayed here -->
+          <li>No attendance marked yet.</li>
+        </ul>
+      </div>
+    </div>
+  
   </div>
-
   <script>
     // Store attendance data by date
     const attendanceData = {};
@@ -198,6 +228,23 @@
         }
       });
     });
+
+
+    function menuImage(){
+        let sidebar = document.getElementById("sidebar");
+        let mainpage = document.getElementById("mainpage");
+        
+        document.getElementById("sidebar").classList.remove("hidden");
+        document.getElementById("mainpage").classList.add("hidden");
+    }
+
+    function closeSide(){
+        let sidebar = document.getElementById("sidebar");
+        let mainpage = document.getElementById("mainpage");        
+        
+        document.getElementById("sidebar").classList.add("hidden");
+        document.getElementById("mainpage").classList.remove("hidden");
+    }
   </script>
 </body>
 </html>
