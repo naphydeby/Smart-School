@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="output.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
    <style>
     @keyframes welcome {
           from {color:#318abe}
@@ -60,54 +62,41 @@
         
          <div class=" " >
           <form class="text-[17px] font-[600px]" id="loginForm">
-          <div class="text-[12px] w-[80vw] lg:w-[35vw] xl:w-[35vw] flex justify-between items-center mt-8 ">
-              <button
             
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-             <a href="adminlogin.html"> ADMIN</a>
-            </button>
-            <button
+
+
+          <div class="text-[12px]   mt-8 ">
+            <div class=" bg-blue-500  rounded w-[80vw] h-[40px] lg:w-[25vw] xl:w-[20vw] flex flex-row justify-between items-center text-[20px] text-white ">
+            <p class="pl-4">Select</p>
+            <img class="pr-4 " id="dropdownButton" src="/asset/down (1).png" alt="">
             
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="teacherlogin.html">
-              TEACHER
-            </button>
-          </a>
-            <button
-             
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="studentlogin.html">
-              STUDENT
-            </button>
-          </a>
-            <button
-              
-              
-              class=" bg-[#318abe] text-white shadow-md text-center w-[20%]  lg:w-[20%] h-[40px] rounded-[5px]"
-            >
-            <a href="guardianlogin.html">
-              GUARDIAN
-            </button>
-          </a>
+           </div>
             </div>
-           
-            <div class="mt-6 text-center flex " >
-              <input type="checkbox" class="mt-1">
-              <p class="ml-2 ">
-                Save User
-              </p>
+              
             </div>
+            <div class="hidden  " id="dropdownContent">
+              <div  class="  flex flex-col -mt-[20px] text-blue-500 font-semibold font-[Avenir] w-[80vw]  lg:w-[20vw] xl:w-[20vw]  items-center pt-4 space-y-4  bg-white border   border-gray-200 shadow-lg rounded">
+                <p><a href="adminlogin.html" class=" px-4 py-2 hover:bg-gray-100">ADMIN</a></p>
+                <p><a href="teacherlogin.html" class=" px-4 py-2 hover:bg-gray-100">TEACHER</a></p>
+                <p><a href="studentlogin.html" class=" px-4 py-2 hover:bg-gray-100">STUDENT</a></p>
+                <p><a href="guardianlogin.html" class=" px-4 py-2 hover:bg-gray-100">GUARDIAN</a></p>
+              </div>
+             </div>
             
-           
-          </form>
+              </form>
+              
          </div>
         
       </div>
     </div>
-    
+    <script>
+      document.getElementById('dropdownButton').addEventListener('click', function() {
+        const dropdownContent = document.getElementById('dropdownContent');
+        dropdownContent.classList.toggle('hidden');
+      });
+  
+      
+    </script>
    
   </body>
 </html>

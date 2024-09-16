@@ -58,30 +58,40 @@
         
          <div class=" " >
           <form class="text-[17px] font-[600px]" id="loginForm">
-           <label for="email" class="" >Email</label><br>
+           <label for="email" class="text-blue-500" >Email</label><br>
             <input
               type="email"
               placeholder="Enter your name"
               id="email"
-              class=" pl-4 border-0 border-b-2 bg-white shadow-md outline-none focus:border-b-2 focus:border-black w-[80vw]  lg:w-[35vw]  h-[60px] rounded-[10px]"
+              class=" pl-4  border-2 bg-white  outline-none  focus:border-blue-500 w-[80vw]  lg:w-[35vw]  h-[60px] rounded-[10px]"
             />
-            <br /><br>
-            <label for="password" class=" " >Password</label><br>
-            <input
-              type="password"
-              placeholder="........"
-              id="password"
-              class=" pl-4 border-0 border-b-2 bg-white shadow-md outline-none focus:border-b-2 focus:border-black  w-[80vw]  lg:w-[35vw] h-[60px] rounded-[10px]"
-            />
-            <div class="text-[12px] w-[80vw] lg:w-[35vw] xl:w-[35vw] flex justify-between items-center mt-8 ">
+            <br />
+            <div class="mt-4">
+              <label for="password" class="text-blue-500 pt-4" >Password</label><br>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+                class=" pl-4 border-2  bg-white  outline-none focus:border-blue-500  w-[80vw]  lg:w-[35vw] h-[60px] rounded-[10px]"
+              />
+            </div>
+            
+            <div class=" bg-[#318abe] h-[50px] text-white text-[20px] w-[45vw] lg:w-[25vw] flex justify-center   mt-[40px] rounded-[5px]  ">
+             
+              <div class=" ">
+                <img src="/asset/login (1).png" alt="" class="w-5 h-5 mt-4 mr-2">
+              </div>
                 <button
+                
                 type="submit"
                 onclick="login()"
-                class=" bg-[#318abe] text-white shadow-md text-center w-[80%]  lg:w-[80vw] h-[40px] rounded-[5px]"
+                class="  "
               >
                 Login
               </button>
+              
             </div>
+           
            
             <div class="mt-6 text-center flex " >
               <input type="checkbox" class="mt-1">
@@ -89,8 +99,8 @@
                 Save User
               </p>
             </div>
+          
             
-           
           </form>
          </div>
         
