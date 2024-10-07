@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap"
+        rel="stylesheet">
+    <script src="Tailwind/tailwind.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-[80vw] md:w-[50vw] lg:w-[20vw] bg-white shadow-lg p-6 fixed h-screen hidden lg:block">
+            <div class="flex items-center space-x-2 mt-3">
+                <a href="#" class="block text-2xl md:text-3xl font-bold md:pt-2 text-gray-700">SMART SCHOOL</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="rounded-md pl-1 p-1 mt-3">
+                        <a href="admin-dashboard.html" class="flex items-center space-x-2 py-2 text-xl font-[500] pl-2">
+                            <img src="../asset/dashboard (1).png" class="w-6 h-6" alt="dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="manage-teacher.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/teacher.png" class="w-6 h-6" alt="manage teachers">
+                            <span>Teachers</span>
+                        </a>
+                    </li>
+                    <li class="bg-blue-500 rounded-md pl-1 p-1 text-white mt-[-4px]">
+                        <a href="manage-staff.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/user (3).png" class="w-6 h-6" alt="manage teachers">
+                            <span>Staffs</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="manage-students.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/user (4).png" class="w-6 h-6" alt="manage students">
+                            <span>Students</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="reports.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/report.png" class="w-6 h-6" alt="reports">
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="Fees.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/report.png" class="w-6 h-6" alt="reports">
+                            <span>Fees</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="announcements.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/marketing.png" class="w-6 h-6" alt="announcements">
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                        <a href="settings.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../asset/setting (1).png" class="w-6 h-6" alt="settings">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 mt-[-4px]">
+                        <a href="#" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../asset/logout (1).png" class="w-6 h-6" alt="logout">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="flex-1 p-6 lg:ml-[20vw] w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Add Staffs</h2>
+                <a href="../Smart-School/" class="bg-blue-500 text-white p-2 rounded-lg">View Staff</a>
+                <button id="addTeacherBtn" ></button>
+            </div>
+
+            <!-- Add Teacher Modal -->
+    <div id="addTeacherModal" class=" flex items-center justify-center">
+        <div class="bg-white p-2 pl-4 rounded-lg shadow-lg w-[650px] h-[450px]">
+            <h3 class="text-lg font-semibold mb-4 text-center">Add Staff</h3>
+            <form id="addTeacherForm" class="w-[600px] space-y-4 justify-center">
+                <div class="flex gap-5 pl-[17px]">
+                    <div>
+                        <!-- <label for="teacherId" class="block text-sm font-medium">ID</label> -->
+                        <input type="text" id="teacherId" placeholder="Staff ID" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                    <div>
+                        <!-- <label for="teacherName" class="block text-sm font-medium">Firstname</label> -->
+                        <input type="text" id="teacherName" placeholder="Firstname" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                </div>
+                <div class="flex gap-5 pl-[17px]">
+                    <div>
+                        <!-- <label for="StaffLastname" class="block text-sm font-medium">Lastname</label> -->
+                        <input type="text" placeholder="Lastname" id="StaffLastname" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                    <div>
+                        <!-- <label for="teacherEmail" class="block text-sm font-medium">Email</label> -->
+                        <input type="email" id="teacherEmail" placeholder="Email" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                </div>
+                <div class="pl-[17px]">
+                    <!-- <label for="teacherHomeAddress" class="block text-sm font-medium">Home address</label> -->
+                    <input type="text" id="teacherHomeAddress" placeholder="Home Address" class="w-[580px] p-2 border border-gray-300 rounded-lg" required />
+                </div>
+                <div class="flex gap-5 pl-[17px]">
+                    <div>
+                        <!-- <label for="StaffUsername" class="block text-sm font-medium">Username</label> -->
+                        <input type="text" id="StaffUsername" placeholder="Username" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                    <div>
+                        <!-- <label for="StaffPhone" class="block text-sm font-medium">Phone</label> -->
+                        <input type="" id="StaffPhone" placeholder="Phone" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                </div>
+                <div class="flex gap-5 pl-[17px]">
+                    <div>
+                        <!-- <label for="teacherSubject" class="block text-sm font-medium">Subject</label> -->
+                        <input type="text" id="teacherSubject" placeholder="subject" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                    <div>
+                        <!-- <label for="StaffPassword" class="block text-sm font-medium">Password</label> -->
+                        <input type="text" id="StaffPassword" placeholder="Password" class="w-[280px] p-2 border border-gray-300 rounded-lg" required />
+                    </div>
+                </div>
+                <div class="flex justify-end space-x-4">
+                    <button type="button" id="cancelAddTeacher" class="bg-gray-500 text-white px-4 py-2 rounded-lg">Cancel</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Add</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+        
+    
+</body>
+</html>

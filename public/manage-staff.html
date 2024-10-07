@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Teachers</title>
+    <title>Manage Staffs</title>
     <link rel="stylesheet" href="output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,44 +16,42 @@
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <aside class="w-[80vw] md:w-[50vw] lg:w-[20vw] bg-white shadow-lg p-6 fixed h-screen hidden lg:block">
-            <div class="flex items-center space-x-2 mb-8">
-                <a href="admin-dashboard.html" class="block text-2xl md:text-3xl font-bold md:pt-6 text-gray-700">SMART SCHOOL</a>
+            <div class="flex items-center space-x-2 mt-3">
+                <a href="#" class="block text-2xl md:text-3xl font-bold md:pt-2 text-gray-700">SMART SCHOOL</a>
             </div>
             <nav>
                 <ul>
-                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                    <li class="rounded-md pl-1 p-1 mt-3">
                         <a href="admin-dashboard.html" class="flex items-center space-x-2 py-2 text-xl font-[500] pl-2">
                             <img src="../asset/dashboard (1).png" class="w-6 h-6" alt="dashboard">
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="bg-blue-500 rounded-md pl-1 p-1 text-white mt-[-4px]">
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
                         <a href="manage-teacher.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
-                            <img src="../asset/teacher (1).png" class="w-6 h-6" alt="manage teachers">
+                            <img src="../asset/teacher.png" class="w-6 h-6" alt="manage teachers">
                             <span>Teachers</span>
                         </a>
                     </li>
-                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
+                    <li class="bg-blue-500 rounded-md pl-1 p-1 text-white mt-[-4px]">
                         <a href="manage-staff.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
-                            <img src="../asset/user (4).png" class="w-6 h-6" alt="manage teachers">
+                            <img src="../asset/user (3).png" class="w-6 h-6" alt="manage teachers">
                             <span>Staffs</span>
                         </a>
                     </li>
-
                     <li class="rounded-md pl-1 p-1 mt-[-4px]">
                         <a href="manage-students.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
                             <img src="../asset/user (4).png" class="w-6 h-6" alt="manage students">
                             <span>Students</span>
                         </a>
                     </li>
-
                     <li class="rounded-md pl-1 p-1 mt-[-4px]">
                         <a href="reports.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
                             <img src="../asset/report.png" class="w-6 h-6" alt="reports">
                             <span>Reports</span>
                         </a>
                     </li>
-                    <li class="rounded-md pl-1 p-1 mt-2">
+                    <li class="rounded-md pl-1 p-1 mt-[-4px]">
                         <a href="Fees.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
                             <img src="../asset/report.png" class="w-6 h-6" alt="reports">
                             <span>Fees</span>
@@ -84,8 +82,9 @@
         <!-- Main Content -->
         <div class="flex-1 p-6 lg:ml-[20vw] w-full">
             <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-semibold">Manage Teachers</h2>
-                <button id="addTeacherBtn" class="bg-blue-500 text-white p-2 rounded-lg">Add Teacher</button>
+                <h2 class="text-2xl font-semibold">Manage Staffs</h2>
+                <a href="add-staff.html" class="bg-blue-500 text-white p-2 rounded-lg">Add Staff</a>
+                <!-- <button id="addTeacherBtn" >Add Staff</button> -->
             </div>
 
             <!-- Teachers Table -->
@@ -93,12 +92,15 @@
                 <table class="min-w-full bg-white shadow-md rounded-lg">
                     <thead>
                         <tr class="bg-gray-100 text-left text-gray-600 font-semibold">
-                            <th class="py-3 px-4">ID</th>
-                            <th class="py-3 px-4">Name</th>
+                            <th class="py-3 px-4">Staff ID</th>
+                            <th class="py-3 px-4">FirstName</th>
+                            <th class="py-3 px-4">LastName</th>
                             <th class="py-3 px-4">Email</th>
                             <th class="py-3 px-4">Home address</th>
-                            <th class="py-3 px-4">Subject</th>
+                            <th class="py-3 px-4">UserName</th>
+                            <th class="py-3 px-4">Phone No</th>
                             <th class="py-3 px-4">Actions</th>
+                            <th class="py-3 px-4">Password</th>
                         </tr>
                     </thead>
                     <tbody id="teacherTableBody">
@@ -109,39 +111,6 @@
         </div>
     </div>
 
-    <!-- Add Teacher Modal -->
-    <div id="addTeacherModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-lg font-semibold mb-4">Add Teacher</h3>
-            <form id="addTeacherForm" class="w-[400px] space-y-4">
-                <div>
-                    <label for="teacherId" class="block text-sm font-medium">ID</label>
-                    <input type="text" id="teacherId" class="w-full p-2 border border-gray-300 rounded-lg" required />
-                </div>
-                <div>
-                    <label for="teacherName" class="block text-sm font-medium">Name</label>
-                    <input type="text" id="teacherName" class="w-full p-2 border border-gray-300 rounded-lg" required />
-                </div>
-                <div>
-                    <label for="teacherEmail" class="block text-sm font-medium">Email</label>
-                    <input type="email" id="teacherEmail" class="w-full p-2 border border-gray-300 rounded-lg" required />
-                </div>
-                <div>
-                    <label for="teacherHomeAddress" class="block text-sm font-medium">Home address</label>
-                    <input type="text" id="teacherHomeAddress" class="w-full p-2 border border-gray-300 rounded-lg" required />
-                </div>
-                <div>
-                    <label for="teacherSubject" class="block text-sm font-medium">Subject</label>
-                    <input type="text" id="teacherSubject" class="w-full p-2 border border-gray-300 rounded-lg" required />
-                </div>
-                <div class="flex justify-end space-x-4">
-                    <button type="button" id="cancelAddTeacher" class="bg-gray-500 text-white px-4 py-2 rounded-lg">Cancel</button>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Add</button>
-                </div>
-            </form>
-            
-        </div>
-    </div>
 
     <script>
         // Handle add teacher modal
@@ -168,18 +137,26 @@
             // Get form data
             const id = document.getElementById("teacherId").value;
             const name = document.getElementById("teacherName").value;
-            const homeAddress = document.getElementById("teacherHomeAddress").value;
+            const Lastname = document.getElementById("StaffLastname").value;
             const email = document.getElementById("teacherEmail").value;
+            const homeAddress = document.getElementById("teacherHomeAddress").value;
+            const Username = document.getElementById("StaffUsername").value;
+            const Phone = document.getElementById("StaffPhone").value;
             const subject = document.getElementById("teacherSubject").value;
+            const Password = document.getElementById("StaffPassword").value;
 
             // Create a new row for the teacher
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td class="py-3 px-4">${id}</td>
                 <td class="py-3 px-4">${name}</td>
+                <td class="py-3 px-4">${Lastname}</td>
                 <td class="py-3 px-4">${email}</td>
                 <td class="py-3 px-4">${homeAddress}</td>
+                <td class="py-3 px-4">${Username}</td>
+                <td class="py-3 px-4">${Phone}</td>
                 <td class="py-3 px-4">${subject}</td>
+                <td class="py-3 px-4">${Password}</td>
                 <td class="flex flex-wrap gap-2 py-3 px-4">
                     <button class=" text-red-500 px-4 py-1 rounded-lg" onclick="deleteTeacher(this)">Delete</button>
                     <a  class="text-green-500 px-4 py-1 rounded-lg"  href="#">View More</a>
